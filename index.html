@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lana Del Rey | Site Oficial de Fãs</title>
+  <meta name="description" content="Portal completo sobre Lana Del Rey com discografia, loja oficial, cadastro de fã-clube e conteúdo exclusivo." />
+  <meta property="og:title" content="Lana Del Rey | Site Oficial de Fãs">
+  <meta property="og:description" content="Explore o universo de Lana Del Rey com discografia completa, loja oficial e cadastro no fã-clube.">
+  <meta property="og:image" content="https://i.pinimg.com/736x/1a/97/9f/1a979f2c3526bc2b511c5e916dd1793d.jpg">
+  <meta name="keywords" content="Lana Del Rey, Elizabeth Grant, música, loja oficial, fã-clube, Born to Die, Blue Banisters">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #8b6b5e;
+      --secondary-color: #2a211e;
+      --accent-color: #c9a88a;
+      --gold-color: #C5A456;
+      --text-light: #f5f5f5;
+      --text-dark: #1a1a1a;
+      --bg-dark: #0d0d0d;
+      --bg-light: #f8f5f2;
+    }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      transition: all 0.5s ease;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+    
+    .dark-mode {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+    }
+    
+    .dark-mode .navbar,
+    .dark-mode footer {
+      background-color: var(--secondary-color) !important;
+    }
+    
+    .dark-mode .card {
+      background-color: #1a1a1a;
+      border-color: #333;
+    }
+    
+    h1, h2, h3, h4 {
+      font-family: 'Cinzel', serif;
+      color: var(--primary-color);
+      letter-spacing: 0.5px;
+    }
+    
+    .navbar {
+      background-color: rgba(139, 107, 94, 0.9);
+      padding: 15px 0;
+      transition: all 0.3s;
+      backdrop-filter: blur(5px);
+    }
+    
+    .navbar.scrolled {
+      padding: 10px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    
+    .hero-section {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url('https://i.pinimg.com/736x/1a/97/9f/1a979f2c3526bc2b511c5e916dd1793d.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      margin-bottom: 50px;
+      position: relative;
+    }
+    
+    .hero-title {
+      font-size: 5rem;
+      font-weight: 700;
+      text-shadow: 3px 3px 8px rgba(0,0,0,0.7);
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.5rem;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+      font-style: italic;
+      margin-bottom: 2rem;
+    }
+    
+    .album-card {
+      transition: all 0.4s;
+      margin-bottom: 30px;
+      border: none;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      overflow: hidden;
+      background: linear-gradient(145deg, #ffffff, #f5f5f5);
+    }
+    
+    .dark-mode .album-card {
+      background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+    }
+    
+    .album-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+    
+    .album-card .card-img-top {
+      transition: transform 0.8s;
+    }
+    
+    .album-card:hover .card-img-top {
+      transform: scale(1.05);
+    }
+    
+    .gallery-item {
+      margin-bottom: 30px;
+      overflow: hidden;
+      border-radius: 4px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+      position: relative;
+    }
+    
+    .gallery-item img {
+      transition: all 0.6s;
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+    
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+    
+    .gallery-item::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.3);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    
+    .gallery-item:hover::after {
+      opacity: 1;
+    }
+    
+    .newsletter-section {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 80px 0;
+      margin: 70px 0;
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+    }
+    
+    .dark-mode .newsletter-section {
+      background: linear-gradient(135deg, #6b5347, #1a1513);
+    }
+    
+    .newsletter-container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .newsletter-title {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      font-family: 'Cinzel', serif;
+    }
+    
+    .newsletter-description {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .newsletter-form {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .newsletter-input {
+      flex: 1;
+      min-width: 250px;
+      padding: 15px 20px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1rem;
+      outline: none;
+    }
+    
+    .newsletter-button {
+      padding: 15px 30px;
+      background-color: var(--gold-color);
+      color: #000;
+      border: none;
+      border-radius: 50px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-size: 1rem;
+    }
+    
+    .newsletter-button:hover {
+      background-color: #e6c260;
+      transform: translateY(-3px);
+    }
+    
+    .newsletter-section::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 0;
+      width: 100%;
+      height: 20px;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M1200 0L0 0 892.25 114.72 1200 0z" fill="%23f8f5f2"></path></svg>');
+      background-size: cover;
+    }
+    
+    .dark-mode .newsletter-section::before {
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M1200 0L0 0 892.25 114.72 1200 0z" fill="%230d0d0d"></path></svg>');
+    }
+    
+    .newsletter-section::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      height: 20px;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M1200 0L0 0 892.25 114.72 1200 0z" fill="%23f8f5f2"></path></svg>');
+      background-size: cover;
+      transform: rotate(180deg);
+    }
+    
+    .dark-mode .newsletter-section::after {
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M1200 0L0 0 892.25 114.72 1200 0z" fill="%230d0d0d"></path></svg>');
+    }
+    
+    .timeline {
+      position: relative;
+      padding: 60px 0;
+    }
+    
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(to bottom, var(--primary-color), var(--gold-color));
+      transform: translateX(-50%);
+    }
+    
+    .timeline-item {
+      position: relative;
+      margin-bottom: 60px;
+    }
+    
+    .timeline-content {
+      padding: 25px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      position: relative;
+      border-left: 4px solid var(--gold-color);
+    }
+    
+    .dark-mode .timeline-content {
+      background-color: #1e1e1e;
+    }
+    
+    .timeline-date {
+      font-weight: bold;
+      color: var(--gold-color);
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    .btn-primary, .btn-outline-primary {
+      --bs-btn-color: #000;
+      --bs-btn-bg: var(--gold-color);
+      --bs-btn-border-color: var(--gold-color);
+      --bs-btn-hover-color: #000;
+      --bs-btn-hover-bg: #e6c260;
+      --bs-btn-hover-border-color: #e6c260;
+      --bs-btn-active-color: #000;
+      --bs-btn-active-bg: #e6c260;
+      --bs-btn-active-border-color: #e6c260;
+      --bs-btn-disabled-color: #000;
+      --bs-btn-disabled-bg: var(--gold-color);
+      --bs-btn-disabled-border-color: var(--gold-color);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-outline-primary {
+      --bs-btn-color: var(--gold-color);
+      --bs-btn-bg: transparent;
+      --bs-btn-border-color: var(--gold-color);
+      --bs-btn-hover-color: #000;
+    }
+    
+    .quote-section {
+      padding: 80px 0;
+      background-color: #f0ece6;
+      position: relative;
+    }
+    
+    .dark-mode .quote-section {
+      background-color: #1a1a1a;
+    }
+    
+    .quote-section blockquote {
+      font-size: 1.8rem;
+      font-style: italic;
+      color: var(--secondary-color);
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      padding: 0 50px;
+    }
+    
+    .dark-mode .quote-section blockquote {
+      color: var(--text-light);
+    }
+    
+    .quote-section blockquote::before,
+    .quote-section blockquote::after {
+      content: '"';
+      font-size: 4rem;
+      color: var(--gold-color);
+      opacity: 0.5;
+      position: absolute;
+    }
+    
+    .quote-section blockquote::before {
+      top: -20px;
+      left: 0;
+    }
+    
+    .quote-section blockquote::after {
+      bottom: -60px;
+      right: 0;
+    }
+    
+    .quote-author {
+      text-align: center;
+      font-family: 'Cinzel', serif;
+      color: var(--primary-color);
+      margin-top: 30px;
+      font-size: 1.2rem;
+    }
+    
+    #loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--bg-dark);
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    
+    .loading {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border: 4px solid rgba(197, 164, 86, 0.2);
+      border-radius: 50%;
+      border-top-color: var(--gold-color);
+      animation: spin 1s ease-in-out infinite;
+    }
+    
+    .loading-text {
+      color: var(--text-light);
+      letter-spacing: 2px;
+      margin-top: 20px;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    
+    .typewriter {
+      overflow: hidden;
+      border-right: .15em solid var(--gold-color);
+      white-space: nowrap;
+      margin: 0 auto;
+      letter-spacing: .15em;
+      animation: 
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+    }
+    
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: var(--gold-color); }
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    .floating {
+      animation: float 4s ease-in-out infinite;
+    }
+    
+    .navbar-brand i {
+      color: var(--gold-color);
+    }
+    
+    footer {
+      background-color: var(--primary-color);
+    }
+
+    /* Estilos da Loja */
+    .store-item {
+      transition: all 0.3s;
+      margin-bottom: 30px;
+    }
+    
+    .store-item:hover {
+      transform: translateY(-5px);
+    }
+    
+    .store-item .card {
+      border: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .dark-mode .store-item .card {
+      background-color: #1e1e1e;
+    }
+    
+    .store-item .card-img-top {
+      height: 250px;
+      object-fit: cover;
+    }
+    
+    .price {
+      font-weight: bold;
+      color: var(--primary-color);
+      font-size: 1.2rem;
+    }
+    
+    /* Carrinho de Compras */
+    .cart-sidebar {
+      position: fixed;
+      top: 0;
+      right: -400px;
+      width: 400px;
+      height: 100vh;
+      background-color: white;
+      z-index: 1050;
+      transition: right 0.3s;
+      box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+      overflow-y: auto;
+    }
+    
+    .dark-mode .cart-sidebar {
+      background-color: #1e1e1e;
+      color: var(--text-light);
+    }
+    
+    .cart-sidebar.show {
+      right: 0;
+    }
+    
+    .cart-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 1040;
+      display: none;
+    }
+    
+    .cart-overlay.show {
+      display: block;
+    }
+    
+    .cart-item {
+      border-bottom: 1px solid #eee;
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+    }
+    
+    .dark-mode .cart-item {
+      border-bottom-color: #333;
+    }
+    
+    .cart-item-img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+    }
+    
+    /* Formulário de Cadastro */
+    .signup-form {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .dark-mode .signup-form {
+      background-color: #1e1e1e;
+      color: var(--text-light);
+    }
+    
+    .form-check-label {
+      font-size: 0.9rem;
+    }
+    
+    .dark-mode .form-control,
+    .dark-mode .form-select {
+      background-color: #2a2a2a;
+      color: var(--text-light);
+      border-color: #444;
+    }
+    
+    .dark-mode .form-control:focus,
+    .dark-mode .form-select:focus {
+      background-color: #2a2a2a;
+      color: var(--text-light);
+      border-color: var(--gold-color);
+      box-shadow: 0 0 0 0.25rem rgba(197, 164, 86, 0.25);
+    }
+    
+    .dark-mode .form-check-input {
+      background-color: #2a2a2a;
+      border-color: #666;
+    }
+    
+    .dark-mode .form-check-input:checked {
+      background-color: var(--gold-color);
+      border-color: var(--gold-color);
+    }
+    
+    .dark-mode .form-check-label {
+      color: var(--text-light);
+    }
+    
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 3rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.2rem;
+      }
+      
+      .timeline::before {
+        left: 20px;
+      }
+      
+      .quote-section blockquote {
+        font-size: 1.4rem;
+        padding: 0 30px;
+      }
+      
+      .cart-sidebar {
+        width: 100%;
+        right: -100%;
+      }
+      
+      .cart-sidebar.show {
+        right: 0;
+      }
+      
+      .newsletter-title {
+        font-size: 2rem;
+      }
+      
+      .newsletter-form {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .newsletter-input {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loading">
+    <div class="loading mb-4"></div>
+    <p class="loading-text">CARREGANDO O UNIVERSO DE LANA...</p>
+  </div>
+
+  <!-- Carrinho de Compras -->
+  <div class="cart-overlay"></div>
+  <div class="cart-sidebar">
+    <div class="p-4">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h4>Carrinho de Compras</h4>
+        <button class="btn-close close-cart"></button>
+      </div>
+      <div class="cart-items">
+        <!-- Itens do carrinho serão adicionados aqui dinamicamente -->
+        <div class="text-center py-4">
+          <p>Seu carrinho está vazio</p>
+        </div>
+      </div>
+      <div class="cart-total mt-4 pt-3 border-top">
+        <div class="d-flex justify-content-between">
+          <h5>Total:</h5>
+          <h5 class="total-price">R$ 0,00</h5>
+        </div>
+        <button class="btn btn-primary w-100 mt-3 checkout-btn">Finalizar Compra</button>
+      </div>
+    </div>
+  </div>
+
+  <header class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <i class="fas fa-crown me-2"></i>LANA DEL REY
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">A Artista</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#discography">Música</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#store">Loja</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#fanclub">Fã-Clube</a>
+          </li>
+          <li class="nav-item ms-lg-3">
+            <button class="btn btn-outline-light position-relative" id="cart-btn">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger cart-count">
+                0
+              </span>
+            </button>
+          </li>
+          <li class="nav-item ms-lg-3">
+            <button class="btn btn-outline-light" id="toggleTheme">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="home">
+    <div class="container">
+      <h1 class="hero-title">LANA DEL REY</h1>
+      <p class="hero-subtitle typewriter">"Eu canto sobre o amor e a beleza trágica"</p>
+      <div class="mt-4">
+        <a href="#discography" class="btn btn-primary btn-lg px-4 py-2 me-2">Explorar Música</a>
+        <a href="#store" class="btn btn-outline-light btn-lg px-4 py-2">Visitar Loja</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <!-- About Section -->
+    <section id="about" class="py-5 my-5">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <h2 class="display-4 mb-4">A Poetisa do Melancólico</h2>
+          <p class="lead">Elizabeth Woolridge Grant, conhecida como Lana Del Rey, é uma das artistas mais icônicas e influentes da música contemporânea.</p>
+          <p>Sua obra transcende o pop convencional, mergulhando em temas de amor trágico, nostalgia americana e beleza melancólica. Com uma voz aveludada e letras poéticas, Lana criou um universo único que ressoa com milhões de fãs ao redor do mundo.</p>
+          <p>Nascida em Nova York em 1985, sua carreira explodiu com o viral "Video Games" em 2011, estabelecendo seu estilo barroco-pop que evoluiu ao longo de nove álbuns de estúdio, cada um uma obra de arte completa.</p>
+          <div class="mt-4">
+            <a href="#" class="btn btn-outline-primary me-2">Biografia Completa</a>
+            <a href="#" class="btn btn-primary">Prêmios & Reconhecimentos</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="https://hollywoodforevertv.com.br/media/uploads/referencias-nas-musicas-de-lana-del-rey.jpg" alt="Lana Del Rey" class="img-fluid rounded shadow-lg floating">
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+      <div class="container">
+        <blockquote>
+          "Eu sempre tive uma visão gótica e melancólica da vida, mas também acho que há beleza nisso."
+        </blockquote>
+        <p class="quote-author">— Lana Del Rey</p>
+      </div>
+    </section>
+
+    <!-- Discography Section -->
+    <section id="discography" class="py-5 my-5">
+      <h2 class="text-center mb-5 display-4">Obra Musical</h2>
+      <div class="row">
+        <!-- Born to Die -->
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="card album-card h-100">
+            <img src="https://i.scdn.co/image/ab67616d0000b273484db9b89545facba928d933" class="card-img-top" alt="Born to Die">
+            <div class="card-body">
+              <h5 class="card-title">Born to Die</h5>
+              <p class="card-text text-muted">2012 • Paradise Edition</p>
+              <p class="card-text">O álbum que definiu seu estilo, misturando hip-hop com orquestrações dramáticas e letras sobre amor trágico.</p>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <a href="#" class="btn btn-sm btn-outline-primary">Detalhes</a>
+                <small class="text-muted">14 faixas • 3x Platina</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Ultraviolence -->
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="card album-card h-100">
+            <img src="https://i.scdn.co/image/ab67616d0000b2730a921fb6a0b94a6d2c6c6c71" class="card-img-top" alt="Ultraviolence">
+            <div class="card-body">
+              <h5 class="card-title">Ultraviolence</h5>
+              <p class="card-text text-muted">2014</p>
+              <p class="card-text">Uma viagem psicodélica pelo rock dos anos 60/70, com produção de Dan Auerbach e letras sombrias e introspectivas.</p>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <a href="#" class="btn btn-sm btn-outline-primary">Detalhes</a>
+                <small class="text-muted">11 faixas • Platina</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Norman Fucking Rockwell -->
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="card album-card h-100">
+            <img src="https://i.scdn.co/image/ab67616d00001e02879e9318cb9f4e05ee552ac9" class="card-img-top" alt="Norman Fucking Rockwell">
+            <div class="card-body">
+              <h5 class="card-title">Norman Fucking Rockwell!</h5>
+              <p class="card-text text-muted">2019</p>
+              <p class="card-text">Aclamado pela crítica, este álbum mostra Lana no auge de suas habilidades como compositora, com influências de Joni Mitchell.</p>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <a href="#" class="btn btn-sm btn-outline-primary">Detalhes</a>
+                <small class="text-muted">14 faixas • Grammy Nominee</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Honeymoon -->
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="card album-card h-100">
+            <img src="https://i.scdn.co/image/ab67616d00001e02defb7c202d927b6b7f5977ad" class="card-img-top" alt="Honeymoon">
+            <div class="card-body">
+              <h5 class="card-title">Honeymoon</h5>
+              <p class="card-text text-muted">2015</p>
+              <p class="card-text">Um álbum de sonoridade cinematográfica que mistura jazz, trap e elementos de música clássica.</p>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <a href="#" class="btn btn-sm btn-outline-primary">Detalhes</a>
+                <small class="text-muted">14 faixas • Ouro</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Lust for Life -->
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="card album-card h-100">
+            <img src="https://i.scdn.co/image/ab67616d00001e026b3e438d34f7c6fe0e1bcd2a" class="card-img-top" alt="Lust for Life">
+            <div class="card-body">
+              <h5 class="card-title">Lust for Life</h5>
+              <p class="card-text text-muted">2017</p>
+              <p class="card-text">Colaborações com The Weeknd, Stevie Nicks e outros, mostrando uma Lana mais esperançosa e política.</p>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <a href="#" class="btn btn-sm btn-outline-primary">Detalhes</a>
+                <small class="text-muted">16 faixas • Platina</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Chemtrails Over the Country Club -->
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="card album-card h-100">
+            <img src="https://i.scdn.co/image/ab67616d00001e02c4b4a7f6d2a2a0e3a3a3b3e5" class="card-img-top" alt="Chemtrails Over the Country Club">
+            <div class="card-body">
+              <h5 class="card-title">Chemtrails Over the Country Club</h5>
+              <p class="card-text text-muted">2021</p>
+              <p class="card-text">Um retorno às raízes acústicas com letras introspectivas sobre fama, isolamento e feminilidade.</p>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <a href="#" class="btn btn-sm btn-outline-primary">Detalhes</a>
+                <small class="text-muted">11 faixas</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Blue Banisters -->
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="card album-card h-100">
+            <img src="https://i.scdn.co/image/ab67616d00001e02a3b3b3b3b3b3b3b3b3b3b3b" class="card-img-top" alt="Blue Banisters">
+            <div class="card-body">
+              <h5 class="card-title">Blue Banisters</h5>
+              <p class="card-text text-muted">2021</p>
+              <p class="card-text">Álbum surpresa com canções mais pessoais e intimistas, gravadas em sua casa durante a pandemia.</p>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <a href="#" class="btn btn-sm btn-outline-primary">Detalhes</a>
+                <small class="text-muted">15 faixas</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Did you know that there's a tunnel under Ocean Blvd -->
+        <div class="col-md-6 col-lg-4 col-xl-3">
+          <div class="card album-card h-100">
+            <img src="https://i.scdn.co/image/ab67616d00001e02b3b3b3b3b3b3b3b3b3b3b3b" class="card-img-top" alt="Did you know that there's a tunnel under Ocean Blvd">
+            <div class="card-body">
+              <h5 class="card-title">Ocean Blvd</h5>
+              <p class="card-text text-muted">2023</p>
+              <p class="card-text">Seu nono álbum de estúdio, explorando temas de memória, família e a passagem do tempo.</p>
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <a href="#" class="btn btn-sm btn-outline-primary">Detalhes</a>
+                <small class="text-muted">16 faixas</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <a href="#" class="btn btn-primary px-4">Discografia Completa</a>
+      </div>
+    </section>
+
+    <!-- Music Player Section -->
+    <section class="py-5 bg-light my-5">
+      <div class="container">
+        <h2 class="text-center mb-5 display-4">Ouça Agora</h2>
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <h4>Born to Die</h4>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5VoeRuTrGhTbKelUfwymwu?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+          <div class="col-md-6 mb-4">
+            <h4>Norman Fucking Rockwell</h4>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5XpEKORZ4y6OrCZSKsi46A?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Loja Section -->
+    <section id="store" class="py-5 my-5">
+      <h2 class="text-center mb-5 display-4">Loja Oficial</h2>
+      <div class="row">
+        <!-- Produto 1 -->
+        <div class="col-md-6 col-lg-4 col-xl-3 store-item">
+          <div class="card h-100">
+            <img src="https://m.media-amazon.com/images/I/71XWQGjwYBL._AC_SL1500_.jpg" class="card-img-top" alt="Vinil Born to Die">
+            <div class="card-body">
+              <h5 class="card-title">Vinil Born to Die</h5>
+              <p class="card-text">Edição de luxo em vinil duplo 180g com encarte especial.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="price">R$ 199,90</span>
+                <button class="btn btn-sm btn-primary add-to-cart" data-id="1" data-name="Vinil Born to Die" data-price="199.90" data-img="https://m.media-amazon.com/images/I/71XWQGjwYBL._AC_SL1500_.jpg">
+                  <i class="fas fa-cart-plus"></i> Adicionar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Produto 2 -->
+        <div class="col-md-6 col-lg-4 col-xl-3 store-item">
+          <div class="card h-100">
+            <img src="https://m.media-amazon.com/images/I/81KQ+j3yqVL._AC_SL1500_.jpg" class="card-img-top" alt="Camiseta NFR">
+            <div class="card-body">
+              <h5 class="card-title">Camiseta NFR!</h5>
+              <p class="card-text">Camiseta oficial do álbum Norman Fucking Rockwell! em algodão penteado.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="price">R$ 89,90</span>
+                <button class="btn btn-sm btn-primary add-to-cart" data-id="2" data-name="Camiseta NFR!" data-price="89.90" data-img="https://m.media-amazon.com/images/I/81KQ+j3yqVL._AC_SL1500_.jpg">
+                  <i class="fas fa-cart-plus"></i> Adicionar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Produto 3 -->
+        <div class="col-md-6 col-lg-4 col-xl-3 store-item">
+          <div class="card h-100">
+            <img src="https://m.media-amazon.com/images/I/71j+9+q+ZVL._AC_SL1500_.jpg" class="card-img-top" alt="Livro de Poesia">
+            <div class="card-body">
+              <h5 class="card-title">Livro Violet Bent Backwards</h5>
+              <p class="card-text">Livro de poesia autografado com fotos exclusivas.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="price">R$ 129,90</span>
+                <button class="btn btn-sm btn-primary add-to-cart" data-id="3" data-name="Livro Violet Bent Backwards" data-price="129.90" data-img="https://m.media-amazon.com/images/I/71j+9+q+ZVL._AC_SL1500_.jpg">
+                  <i class="fas fa-cart-plus"></i> Adicionar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Produto 4 -->
+        <div class="col-md-6 col-lg-4 col-xl-3 store-item">
+          <div class="card h-100">
+            <img src="https://m.media-amazon.com/images/I/71h+3+3+3+3L._AC_SL1500_.jpg" class="card-img-top" alt="Poster Chemtrails">
+            <div class="card-body">
+              <h5 class="card-title">Poster Chemtrails</h5>
+              <p class="card-text">Poster oficial do álbum Chemtrails Over the Country Club (60x90cm).</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="price">R$ 49,90</span>
+                <button class="btn btn-sm btn-primary add-to-cart" data-id="4" data-name="Poster Chemtrails" data-price="49.90" data-img="https://m.media-amazon.com/images/I/71h+3+3+3+3L._AC_SL1500_.jpg">
+                  <i class="fas fa-cart-plus"></i> Adicionar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Produto 5 -->
+        <div class="col-md-6 col-lg-4 col-xl-3 store-item">
+          <div class="card h-100">
+            <img src="https://m.media-amazon.com/images/I/71XWQGjwYBL._AC_SL1500_.jpg" class="card-img-top" alt="CD Blue Banisters">
+            <div class="card-body">
+              <h5 class="card-title">CD Blue Banisters</h5>
+              <p class="card-text">Edição especial com fotos exclusivas e booklet.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="price">R$ 59,90</span>
+                <button class="btn btn-sm btn-primary add-to-cart" data-id="5" data-name="CD Blue Banisters" data-price="59.90" data-img="https://m.media-amazon.com/images/I/71XWQGjwYBL._AC_SL1500_.jpg">
+                  <i class="fas fa-cart-plus"></i> Adicionar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Produto 6 -->
+        <div class="col-md-6 col-lg-4 col-xl-3 store-item">
+          <div class="card h-100">
+            <img src="https://m.media-amazon.com/images/I/71j+9+q+ZVL._AC_SL1500_.jpg" class="card-img-top" alt="Caneca Lana Del Rey">
+            <div class="card-body">
+              <h5 class="card-title">Caneca Oficial</h5>
+              <p class="card-text">Caneca de porcelana com design exclusivo (350ml).</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="price">R$ 39,90</span>
+                <button class="btn btn-sm btn-primary add-to-cart" data-id="6" data-name="Caneca Oficial" data-price="39.90" data-img="https://m.media-amazon.com/images/I/71j+9+q+ZVL._AC_SL1500_.jpg">
+                  <i class="fas fa-cart-plus"></i> Adicionar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Produto 7 -->
+        <div class="col-md-6 col-lg-4 col-xl-3 store-item">
+          <div class="card h-100">
+            <img src="https://m.media-amazon.com/images/I/81KQ+j3yqVL._AC_SL1500_.jpg" class="card-img-top" alt="Box Colecionador">
+            <div class="card-body">
+              <h5 class="card-title">Box Colecionador</h5>
+              <p class="card-text">Box especial com todos os álbuns em vinil + itens exclusivos.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="price">R$ 599,90</span>
+                <button class="btn btn-sm btn-primary add-to-cart" data-id="7" data-name="Box Colecionador" data-price="599.90" data-img="https://m.media-amazon.com/images/I/81KQ+j3yqVL._AC_SL1500_.jpg">
+                  <i class="fas fa-cart-plus"></i> Adicionar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Produto 8 -->
+        <div class="col-md-6 col-lg-4 col-xl-3 store-item">
+          <div class="card h-100">
+            <img src="https://m.media-amazon.com/images/I/71h+3+3+3+3L._AC_SL1500_.jpg" class="card-img-top" alt="Pôster Born to Die">
+            <div class="card-body">
+              <h5 class="card-title">Pôster Born to Die</h5>
+              <p class="card-text">Pôster oficial do álbum Born to Die (60x90cm).</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="price">R$ 49,90</span>
+                <button class="btn btn-sm btn-primary add-to-cart" data-id="8" data-name="Pôster Born to Die" data-price="49.90" data-img="https://m.media-amazon.com/images/I/71h+3+3+3+3L._AC_SL1500_.jpg">
+                  <i class="fas fa-cart-plus"></i> Adicionar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fan Club Section -->
+    <section id="fanclub" class="py-5 my-5 bg-light">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h2 class="text-center mb-5 display-4">Junte-se ao Fã-Clube Oficial</h2>
+            <div class="signup-form p-4">
+              <form id="fanclub-form">
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label for="firstName" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="firstName" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="lastName" class="form-label">Sobrenome</label>
+                    <input type="text" class="form-control" id="lastName" required>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">E-mail</label>
+                  <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                  <label for="birthdate" class="form-label">Data de Nascimento</label>
+                  <input type="date" class="form-control" id="birthdate" required>
+                </div>
+                <div class="mb-3">
+                  <label for="country" class="form-label">País</label>
+                  <select class="form-select" id="country" required>
+                    <option value="">Selecione...</option>
+                    <option value="BR">Brasil</option>
+                    <option value="US">Estados Unidos</option>
+                    <option value="UK">Reino Unido</option>
+                    <option value="PT">Portugal</option>
+                    <option value="other">Outro</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="newsletter" checked>
+                    <label class="form-check-label" for="newsletter">
+                      Desejo receber newsletters com novidades e conteúdo exclusivo
+                    </label>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="terms" required>
+                    <label class="form-check-label" for="terms">
+                      Eu concordo com os <a href="#">Termos de Serviço</a> e <a href="#">Política de Privacidade</a>
+                    </label>
+                  </div>
+                </div>
+                <div class="d-grid">
+                  <button type="submit" class="btn btn-primary btn-lg">Cadastrar no Fã-Clube</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+      <div class="container">
+        <div class="newsletter-container">
+          <h2 class="newsletter-title">Receba Novidades Exclusivas</h2>
+          <p class="newsletter-description">Assine nossa newsletter para receber atualizações, conteúdos exclusivos e ofertas especiais diretamente no seu e-mail.</p>
+          <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Seu melhor e-mail" required>
+            <button type="submit" class="newsletter-button">Assinar</button>
+          </form>
+          <small class="d-block mt-3">Nós respeitamos sua privacidade. Você pode cancelar a assinatura a qualquer momento.</small>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center py-5">
+    <div class="container">
+      <div class="mb-4">
+        <a href="#" class="text-white mx-3 fs-4"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-white mx-3 fs-4"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-white mx-3 fs-4"><i class="fab fa-spotify"></i></a>
+        <a href="#" class="text-white mx-3 fs-4"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="text-white mx-3 fs-4"><i class="fab fa-tiktok"></i></a>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <p class="mb-3">© 2024 Lana Del Rey Fã Clube. Este é um site não-oficial criado por fãs.</p>
+          <div class="d-flex justify-content-center flex-wrap">
+            <a href="#" class="text-white mx-2 mb-2">Política de Privacidade</a>
+            <a href="#" class="text-white mx-2 mb-2">Termos de Uso</a>
+            <a href="#" class="text-white mx-2 mb-2">Contato</a>
+            <a href="#" class="text-white mx-2 mb-2">FAQ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Loading screen
+    window.addEventListener('load', function() {
+      document.getElementById('loading').style.display = 'none';
+    });
+
+    // Dark/Light mode toggle
+    document.getElementById('toggleTheme').addEventListener('click', function() {
+      document.body.classList.toggle('dark-mode');
+      
+      // Change icon based on mode
+      const icon = this.querySelector('i');
+      if (document.body.classList.contains('dark-mode')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+      }
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Lazy loading for images
+    if ('loading' in HTMLImageElement.prototype) {
+      const images = document.querySelectorAll('img[loading="lazy"]');
+      images.forEach(img => {
+        img.src = img.dataset.src;
+      });
+    } else {
+      // Fallback for browsers that don't support lazy loading
+      const script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js';
+      document.body.appendChild(script);
+      script.onload = () => {
+        new LazyLoad();
+      };
+    }
+
+    // Carrinho de Compras
+    const cart = [];
+    const cartBtn = document.getElementById('cart-btn');
+    const cartSidebar = document.querySelector('.cart-sidebar');
+    const cartOverlay = document.querySelector('.cart-overlay');
+    const closeCartBtn = document.querySelector('.close-cart');
+    const cartItemsContainer = document.querySelector('.cart-items');
+    const cartCount = document.querySelector('.cart-count');
+    const totalPriceElement = document.querySelector('.total-price');
+    const checkoutBtn = document.querySelector('.checkout-btn');
+
+    // Abrir/Fechar carrinho
+    cartBtn.addEventListener('click', () => {
+      cartSidebar.classList.add('show');
+      cartOverlay.classList.add('show');
+    });
+
+    closeCartBtn.addEventListener('click', () => {
+      cartSidebar.classList.remove('show');
+      cartOverlay.classList.remove('show');
+    });
+
+    cartOverlay.addEventListener('click', () => {
+      cartSidebar.classList.remove('show');
+      cartOverlay.classList.remove('show');
+    });
+
+    // Adicionar ao carrinho
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+      button.addEventListener('click', function() {
+        const id = this.getAttribute('data-id');
+        const name = this.getAttribute('data-name');
+        const price = parseFloat(this.getAttribute('data-price'));
+        const img = this.getAttribute('data-img');
+        
+        // Verificar se o item já está no carrinho
+        const existingItem = cart.find(item => item.id === id);
+        
+        if (existingItem) {
+          existingItem.quantity += 1;
+        } else {
+          cart.push({
+            id,
+            name,
+            price,
+            img,
+            quantity: 1
+          });
+        }
+        
+        updateCart();
+        
+        // Feedback visual
+        this.innerHTML = '<i class="fas fa-check"></i> Adicionado';
+        setTimeout(() => {
+          this.innerHTML = '<i class="fas fa-cart-plus"></i> Adicionar';
+        }, 1000);
+      });
+    });
+
+    // Atualizar carrinho
+    function updateCart() {
+      // Atualizar contador
+      const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+      cartCount.textContent = totalItems;
+      
+      // Atualizar lista de itens
+      if (cart.length === 0) {
+        cartItemsContainer.innerHTML = `
+          <div class="text-center py-4">
+            <p>Seu carrinho está vazio</p>
+          </div>
+        `;
+      } else {
+        cartItemsContainer.innerHTML = cart.map(item => `
+          <div class="cart-item">
+            <div class="d-flex">
+              <img src="${item.img}" class="cart-item-img me-3" alt="${item.name}">
+              <div class="flex-grow-1">
+                <h6>${item.name}</h6>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <button class="btn btn-sm btn-outline-secondary decrease-quantity" data-id="${item.id}">-</button>
+                    <span class="mx-2">${item.quantity}</span>
+                    <button class="btn btn-sm btn-outline-secondary increase-quantity" data-id="${item.id}">+</button>
+                  </div>
+                  <div>
+                    <span>R$ ${(item.price * item.quantity).toFixed(2)}</span>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-link text-danger remove-item" data-id="${item.id}">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+          </div>
+        `).join('');
+      }
+      
+      // Atualizar total
+      const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+      totalPriceElement.textContent = `R$ ${total.toFixed(2)}`;
+      
+      // Adicionar eventos aos novos botões
+      document.querySelectorAll('.decrease-quantity').forEach(button => {
+        button.addEventListener('click', function() {
+          const id = this.getAttribute('data-id');
+          const item = cart.find(item => item.id === id);
+          
+          if (item.quantity > 1) {
+            item.quantity -= 1;
+          } else {
+            cart.splice(cart.indexOf(item), 1);
+          }
+          
+          updateCart();
+        });
+      });
+      
+      document.querySelectorAll('.increase-quantity').forEach(button => {
+        button.addEventListener('click', function() {
+          const id = this.getAttribute('data-id');
+          const item = cart.find(item => item.id === id);
+          item.quantity += 1;
+          updateCart();
+        });
+      });
+      
+      document.querySelectorAll('.remove-item').forEach(button => {
+        button.addEventListener('click', function() {
+          const id = this.getAttribute('data-id');
+          const itemIndex = cart.findIndex(item => item.id === id);
+          cart.splice(itemIndex, 1);
+          updateCart();
+        });
+      });
+    }
+
+    // Finalizar compra
+    checkoutBtn.addEventListener('click', () => {
+      if (cart.length === 0) {
+        alert('Seu carrinho está vazio!');
+        return;
+      }
+      
+      alert('Compra finalizada com sucesso! Obrigado por comprar na nossa loja.');
+      cart.length = 0;
+      updateCart();
+      cartSidebar.classList.remove('show');
+      cartOverlay.classList.remove('show');
+    });
+
+    // Formulário de cadastro no fã-clube
+    document.getElementById('fanclub-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Simular envio do formulário
+      alert('Cadastro realizado com sucesso! Bem-vindo ao Fã-Clube Oficial de Lana Del Rey.');
+      this.reset();
+    });
+
+    // Formulário de newsletter
+    document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = this.querySelector('input[type="email"]').value;
+      alert(`Obrigado por assinar nossa newsletter! Um e-mail de confirmação foi enviado para ${email}`);
+      this.reset();
+    });
+  </script>
+</body>
+</html>
