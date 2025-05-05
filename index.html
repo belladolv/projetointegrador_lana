@@ -1362,4 +1362,1914 @@
     });
   </script>
 </body>
+</html><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lana Del Rey | Site Oficial de Fãs</title>
+  <meta name="description" content="Portal completo sobre Lana Del Rey com discografia, loja oficial, cadastro de fã-clube e conteúdo exclusivo." />
+  <meta property="og:title" content="Lana Del Rey | Site Oficial de Fãs">
+  <meta property="og:description" content="Explore o universo de Lana Del Rey com discografia completa, loja oficial e cadastro no fã-clube.">
+  <meta property="og:image" content="https://i.pinimg.com/736x/1a/97/9f/1a979f2c3526bc2b511c5e916dd1793d.jpg">
+  <meta name="keywords" content="Lana Del Rey, Elizabeth Grant, música, loja oficial, fã-clube, Born to Die, Blue Banisters">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #8b6b5e;
+      --secondary-color: #2a211e;
+      --accent-color: #c9a88a;
+      --gold-color: #C5A456;
+      --text-light: #f5f5f5;
+      --text-dark: #1a1a1a;
+      --bg-dark: #0d0d0d;
+      --bg-light: #f8f5f2;
+    }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      transition: all 0.5s ease;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+    
+    .dark-mode {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+    }
+    
+    .dark-mode .navbar,
+    .dark-mode footer {
+      background-color: var(--secondary-color) !important;
+    }
+    
+    .dark-mode .card {
+      background-color: #1a1a1a;
+      border-color: #333;
+    }
+    
+    h1, h2, h3, h4 {
+      font-family: 'Cinzel', serif;
+      color: var(--primary-color);
+      letter-spacing: 0.5px;
+    }
+    
+    .dark-mode h1, 
+    .dark-mode h2, 
+    .dark-mode h3, 
+    .dark-mode h4 {
+      color: var(--accent-color);
+    }
+    
+    .navbar {
+      background-color: rgba(139, 107, 94, 0.9);
+      padding: 15px 0;
+      transition: all 0.3s;
+      backdrop-filter: blur(5px);
+    }
+    
+    .navbar.scrolled {
+      padding: 10px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+    
+    .hero-section {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url('https://i.pinimg.com/736x/1a/97/9f/1a979f2c3526bc2b511c5e916dd1793d.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      margin-bottom: 50px;
+      position: relative;
+    }
+    
+    .hero-title {
+      font-size: 5rem;
+      font-weight: 700;
+      text-shadow: 3px 3px 8px rgba(0,0,0,0.7);
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.5rem;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+      font-style: italic;
+      margin-bottom: 2rem;
+    }
+    
+    .album-card {
+      transition: all 0.4s;
+      margin-bottom: 30px;
+      border: none;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      overflow: hidden;
+      background: linear-gradient(145deg, #ffffff, #f5f5f5);
+    }
+    
+    .dark-mode .album-card {
+      background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+    }
+    
+    .album-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+    
+    .album-card .card-img-top {
+      transition: transform 0.8s;
+    }
+    
+    .album-card:hover .card-img-top {
+      transform: scale(1.05);
+    }
+    
+    /* Nova Seção de Notícias */
+    .news-section {
+      padding: 80px 0;
+      background-color: #f8f5f2;
+    }
+    
+    .dark-mode .news-section {
+      background-color: #121212;
+    }
+    
+    .news-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .news-main-card {
+      position: relative;
+      height: 500px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    
+    .dark-mode .news-main-card {
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    
+    .news-main-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+    
+    .news-main-card:hover img {
+      transform: scale(1.05);
+    }
+    
+    .news-main-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 30px;
+      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+      color: white;
+    }
+    
+    .news-main-title {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    
+    .news-main-excerpt {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+    }
+    
+    .news-secondary-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    
+    .news-secondary-card {
+      background-color: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: all 0.3s;
+    }
+    
+    .dark-mode .news-secondary-card {
+      background-color: #1e1e1e;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    .news-secondary-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    
+    .dark-mode .news-secondary-card:hover {
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+    
+    .news-secondary-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .news-secondary-content {
+      padding: 20px;
+    }
+    
+    .news-secondary-title {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: var(--primary-color);
+    }
+    
+    .dark-mode .news-secondary-title {
+      color: var(--accent-color);
+    }
+    
+    .news-secondary-date {
+      font-size: 0.9rem;
+      color: #777;
+      margin-bottom: 10px;
+    }
+    
+    .dark-mode .news-secondary-date {
+      color: #aaa;
+    }
+    
+    .news-secondary-excerpt {
+      margin-bottom: 15px;
+    }
+    
+    .news-tag {
+      display: inline-block;
+      padding: 4px 10px;
+      background-color: var(--gold-color);
+      color: black;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-right: 8px;
+    }
+    
+    /* Seção "Ouça Agora" */
+    .music-section {
+      padding: 80px 0;
+      background-color: #f0ece6;
+    }
+    
+    .dark-mode .music-section {
+      background-color: #121212;
+    }
+    
+    .music-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .music-title {
+      color: var(--primary-color);
+      margin-bottom: 20px;
+      font-family: 'Cinzel', serif;
+    }
+    
+    .dark-mode .music-title {
+      color: var(--accent-color);
+    }
+    
+    .music-player-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 30px;
+    }
+    
+    /* Seção Fã-Clube */
+    .fanclub-section {
+      padding: 80px 0;
+      background-color: #f8f5f2;
+    }
+    
+    .dark-mode .fanclub-section {
+      background-color: #121212;
+    }
+    
+    .fanclub-container {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .fanclub-title {
+      color: var(--primary-color);
+      margin-bottom: 40px;
+      font-family: 'Cinzel', serif;
+    }
+    
+    .dark-mode .fanclub-title {
+      color: var(--accent-color);
+    }
+    
+    /* ... (outros estilos permanecem iguais) ... */
+  </style>
+</head>
+<body>
+  <!-- ... (código anterior permanece igual até a seção de notícias) ... -->
+
+    <!-- Nova Seção de Notícias -->
+    <section id="news" class="news-section">
+      <div class="news-container">
+        <h2 class="text-center mb-5 display-4">Últimas Notícias</h2>
+        
+        <!-- Destaque Principal -->
+        <div class="news-main-card">
+          <img src="https://www.rollingstone.com/wp-content/uploads/2023/03/Lana-Del-Rey-Performs-Live-Onstage-During-Her-Tour.jpg" alt="Lana Del Rey em turnê">
+          <div class="news-main-content">
+            <div class="news-tag">Turnê</div>
+            <h3 class="news-main-title">Lana Del Rey anuncia nova turnê mundial para 2024</h3>
+            <p class="news-main-excerpt">A cantora revelou as primeiras datas da turnê que passará por 30 cidades ao redor do mundo, incluindo 5 shows no Brasil.</p>
+            <a href="#" class="btn btn-primary">Ler Mais</a>
+          </div>
+        </div>
+        
+        <!-- Notícias Secundárias -->
+        <div class="news-secondary-container">
+          <div class="news-secondary-card">
+            <img src="https://media.gq.com.mx/photos/61f8c3c2d4a1f5a4c4c4c4c4/16:9/w_2560%2Cc_limit/Lana%2520Del%2520Rey.jpg" alt="Novo álbum">
+            <div class="news-secondary-content">
+              <div class="news-tag">Álbum</div>
+              <h4 class="news-secondary-title">Novo álbum anunciado para 2024</h4>
+              <p class="news-secondary-date">Publicado em 15 de Janeiro, 2024</p>
+              <p class="news-secondary-excerpt">Lana Del Rey revela detalhes sobre seu próximo álbum em entrevista exclusiva à Rolling Stone.</p>
+              <a href="#" class="btn btn-outline-primary btn-sm">Ler Mais</a>
+            </div>
+          </div>
+          
+          <div class="news-secondary-card">
+            <img src="https://www.billboard.com/wp-content/uploads/2023/03/lana-del-rey-2023-billboard-1548.jpg" alt="Colaboração">
+            <div class="news-secondary-content">
+              <div class="news-tag">Colaboração</div>
+              <h4 class="news-secondary-title">Colaboração inédita revelada</h4>
+              <p class="news-secondary-date">Publicado em 10 de Janeiro, 2024</p>
+              <p class="news-secondary-excerpt">Lana Del Rey grava música com artista surpresa; saiba quem é e quando será lançada.</p>
+              <a href="#" class="btn btn-outline-primary btn-sm">Ler Mais</a>
+            </div>
+          </div>
+          
+          <div class="news-secondary-card">
+            <img src="https://atlantidasc-prod.s3.amazonaws.com/wp-content/uploads/2024/02/lana-del-rey.webp" alt="Prêmios">
+            <div class="news-secondary-content">
+              <div class="news-tag">Prêmios</div>
+              <h4 class="news-secondary-title">Indicada a 3 categorias no Grammy 2024</h4>
+              <p class="news-secondary-date">Publicado em 5 de Janeiro, 2024</p>
+              <p class="news-secondary-excerpt">"Did you know..." concorre a Álbum do Ano, Melhor Álbum Vocal Pop e Melhor Performance Solo.</p>
+              <a href="#" class="btn btn-outline-primary btn-sm">Ler Mais</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-5">
+          <a href="#" class="btn btn-primary">Ver Todas as Notícias</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção "Ouça Agora" Atualizada -->
+    <section id="music" class="music-section">
+      <div class="music-container">
+        <h2 class="text-center mb-5 display-4">Ouça Agora</h2>
+        <div class="music-player-container">
+          <div>
+            <h4 class="music-title">Born to Die</h4>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5VoeRuTrGhTbKelUfwymwu?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+          <div>
+            <h4 class="music-title">Norman Fucking Rockwell</h4>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5XpEKORZ4y6OrCZSKsi46A?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Fã-Clube Atualizada -->
+    <section id="fanclub" class="fanclub-section">
+      <div class="fanclub-container">
+        <h2 class="fanclub-title display-4">Junte-se ao Fã-Clube Oficial</h2>
+        <div class="signup-form p-4">
+          <form id="fanclub-form">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName" class="form-label">Nome</label>
+                <input type="text" class="form-control" id="firstName" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastName" class="form-label">Sobrenome</label>
+                <input type="text" class="form-control" id="lastName" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">E-mail</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="birthdate" class="form-label">Data de Nascimento</label>
+              <input type="date" class="form-control" id="birthdate" required>
+            </div>
+            <div class="mb-3">
+              <label for="country" class="form-label">País</label>
+              <select class="form-select" id="country" required>
+                <option value="">Selecione...</option>
+                <option value="BR">Brasil</option>
+                <option value="US">Estados Unidos</option>
+                <option value="UK">Reino Unido</option>
+                <option value="PT">Portugal</option>
+                <option value="other">Outro</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="newsletter" checked>
+                <label class="form-check-label" for="newsletter">
+                  Desejo receber newsletters com novidades e conteúdo exclusivo
+                </label>
+              </div>
+            </div>
+            <div class="mb-3">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="terms" required>
+                <label class="form-check-label" for="terms">
+                  Eu concordo com os <a href="#">Termos de Serviço</a> e <a href="#">Política de Privacidade</a>
+                </label>
+              </div>
+            </div>
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary btn-lg">Cadastrar no Fã-Clube</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ... (restante do código permanece igual) ... -->
+
+  <script>
+    // ... (código JavaScript anterior permanece igual) ...
+
+    // Função para atualizar elementos específicos no modo escuro
+    function updateDarkModeElements() {
+      const isDarkMode = document.body.classList.contains('dark-mode');
+      
+      // Atualizar cores dos títulos
+      const titles = document.querySelectorAll('.music-title, .fanclub-title, .news-secondary-title');
+      titles.forEach(title => {
+        title.style.color = isDarkMode ? 'var(--accent-color)' : 'var(--primary-color)';
+      });
+      
+      // Atualizar fundos das seções
+      const sections = document.querySelectorAll('.news-section, .music-section, .fanclub-section');
+      sections.forEach(section => {
+        section.style.backgroundColor = isDarkMode ? '#121212' : '#f8f5f2';
+      });
+      
+      // Atualizar cards de notícias
+      const newsCards = document.querySelectorAll('.news-secondary-card');
+      newsCards.forEach(card => {
+        card.style.backgroundColor = isDarkMode ? '#1e1e1e' : 'white';
+        card.style.boxShadow = isDarkMode ? '0 5px 15px rgba(0,0,0,0.2)' : '0 5px 15px rgba(0,0,0,0.05)';
+      });
+    }
+
+    // Modificar o evento do botão de tema para chamar a função de atualização
+    document.getElementById('toggleTheme').addEventListener('click', function() {
+      document.body.classList.toggle('dark-mode');
+      
+      // Mudar ícone
+      const icon = this.querySelector('i');
+      if (document.body.classList.contains('dark-mode')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+      }
+      
+      // Atualizar elementos específicos
+      updateDarkModeElements();
+    });
+
+    // Chamar a função ao carregar a página
+    window.addEventListener('load', function() {
+      document.getElementById('loading').style.display = 'none';
+      updateDarkModeElements();
+    });
+
+    // ... (restante do JavaScript permanece igual) ...
+  </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tributo Lana Del Rey | Site Oficial</title>
+  <meta name="description" content="Site tributo completo sobre Lana Del Rey com notícias, discografia, galeria de fotos e muito mais." />
+  <meta property="og:title" content="Tributo Lana Del Rey | Site Oficial">
+  <meta property="og:description" content="Explore o universo de Lana Del Rey com discografia completa, galeria exclusiva e notícias atualizadas.">
+  <meta property="og:image" content="https://i.pinimg.com/736x/1a/97/9f/1a979f2c3526bc2b511c5e916dd1793d.jpg">
+  <meta name="keywords" content="Lana Del Rey, música, Born to Die, Norman Fucking Rockwell, discografia, fã site">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #9a7b6e;
+      --secondary-color: #3a2e2a;
+      --accent-color: #d4af8e;
+      --gold-color: #D4AF37;
+      --text-light: #f8f9fa;
+      --text-dark: #212529;
+      --bg-dark: #121212;
+      --bg-light: #f8f9fa;
+      --card-bg-dark: #1e1e1e;
+      --card-bg-light: #ffffff;
+    }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      transition: all 0.5s ease;
+      overflow-x: hidden;
+    }
+    
+    .dark-mode {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+    }
+    
+    .dark-mode .navbar,
+    .dark-mode footer {
+      background-color: var(--secondary-color) !important;
+    }
+    
+    .dark-mode .card,
+    .dark-mode .timeline-content {
+      background-color: var(--card-bg-dark);
+      border-color: #333;
+      color: var(--text-light);
+    }
+    
+    .dark-mode .bg-light {
+      background-color: #1a1a1a !important;
+    }
+    
+    .dark-mode .text-muted {
+      color: #adb5bd !important;
+    }
+    
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      color: var(--primary-color);
+    }
+    
+    .navbar {
+      background-color: var(--primary-color);
+      padding: 15px 0;
+      transition: all 0.3s;
+    }
+    
+    .navbar.scrolled {
+      padding: 10px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .hero-section {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://i.pinimg.com/736x/1a/97/9f/1a979f2c3526bc2b511c5e916dd1793d.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    
+    .hero-title {
+      font-size: 4rem;
+      font-weight: 700;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    }
+    
+    .album-card, .product-card {
+      transition: transform 0.3s;
+      margin-bottom: 30px;
+      border: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      background-color: var(--card-bg-light);
+    }
+    
+    .dark-mode .album-card,
+    .dark-mode .product-card {
+      background-color: var(--card-bg-dark);
+    }
+    
+    .album-card:hover,
+    .product-card:hover {
+      transform: translateY(-10px);
+    }
+    
+    .product-price {
+      font-size: 1.2rem;
+      color: var(--gold-color);
+      font-weight: bold;
+    }
+    
+    .product-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: var(--gold-color);
+      color: #000;
+      padding: 5px 10px;
+      border-radius: 3px;
+      font-weight: bold;
+      font-size: 0.8rem;
+    }
+    
+    .gallery-item {
+      margin-bottom: 30px;
+      overflow: hidden;
+      border-radius: 5px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+    
+    .gallery-item img {
+      transition: transform 0.5s;
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    
+    .newsletter-section {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 50px 0;
+      margin: 50px 0;
+    }
+    
+    .timeline {
+      position: relative;
+      padding: 40px 0;
+    }
+    
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background-color: var(--primary-color);
+    }
+    
+    .timeline-item {
+      position: relative;
+      margin-bottom: 50px;
+    }
+    
+    .timeline-content {
+      padding: 20px;
+      background-color: var(--card-bg-light);
+      border-radius: 5px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      position: relative;
+    }
+    
+    .timeline-date {
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+
+    /* Botões dourados */
+    .btn-primary, .btn-outline-primary {
+      --bs-btn-color: #000;
+      --bs-btn-bg: var(--gold-color);
+      --bs-btn-border-color: var(--gold-color);
+      --bs-btn-hover-color: #000;
+      --bs-btn-hover-bg: #e6c260;
+      --bs-btn-hover-border-color: #e6c260;
+      --bs-btn-focus-shadow-rgb: 212,175,55;
+      --bs-btn-active-color: #000;
+      --bs-btn-active-bg: #e6c260;
+      --bs-btn-active-border-color: #e6c260;
+      --bs-btn-disabled-color: #000;
+      --bs-btn-disabled-bg: var(--gold-color);
+      --bs-btn-disabled-border-color: var(--gold-color);
+    }
+
+    .btn-outline-primary {
+      --bs-btn-color: var(--gold-color);
+      --bs-btn-bg: transparent;
+      --bs-btn-border-color: var(--gold-color);
+      --bs-btn-hover-color: #000;
+      --bs-btn-hover-bg: var(--gold-color);
+      --bs-btn-hover-border-color: var(--gold-color);
+    }
+    
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      
+      .timeline::before {
+        left: 20px;
+      }
+    }
+    
+    /* Loading animation */
+    .loading {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border: 3px solid rgba(255,255,255,.3);
+      border-radius: 50%;
+      border-top-color: var(--primary-color);
+      animation: spin 1s ease-in-out infinite;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loading" style="position:fixed;top:0;left:0;width:100%;height:100%;background:var(--bg-dark);z-index:9999;display:flex;justify-content:center;align-items:center;">
+    <div class="loading"></div>
+  </div>
+
+  <header class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <i class="fas fa-star me-2"></i>LANA DEL REY
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#discography">Discografia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#gallery">Galeria</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#news">Notícias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#timeline">Timeline</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#store">Loja</a>
+          </li>
+          <li class="nav-item ms-lg-3">
+            <button class="btn btn-outline-light" id="toggleTheme">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="home">
+    <div class="container">
+      <h1 class="hero-title">LANA DEL REY</h1>
+      <p class="lead fs-3" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">A poetisa do pop moderno</p>
+      <a href="#discography" class="btn btn-primary btn-lg mt-3">Explorar Discografia</a>
+    </div>
+  </section>
+
+  <main class="container">
+    <!-- About Section -->
+    <section id="about" class="py-5">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2 class="display-4 mb-4">Sobre Lana</h2>
+          <p class="lead">Elizabeth Woolridge Grant, conhecida profissionalmente como Lana Del Rey, é uma cantora, compositora e poetisa americana.</p>
+          <p>Sua música é conhecida por suas referências cinematográficas à cultura pop americana, explorando temas de romances trágicos, glamour e melancolia. Frequentemente chamada de "a cantora mais fascinante do pop alternativo", ela é creditada por popularizar o estilo de música barroco-pop e sadcore.</p>
+          <div class="mt-4">
+            <a href="#" class="btn btn-outline-primary me-2">Biografia Completa</a>
+            <a href="#" class="btn btn-primary">Prêmios</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="https://hollywoodforevertv.com.br/media/uploads/referencias-nas-musicas-de-lana-del-rey.jpg" alt="Lana Del Rey" class="img-fluid rounded shadow">
+        </div>
+      </div>
+    </section>
+
+    <!-- Discography Section -->
+    <section id="discography" class="py-5">
+      <h2 class="text-center mb-5 display-4">Discografia</h2>
+      <div class="row">
+        <div class="col-md-6 col-lg-4">
+          <div class="card album-card">
+            <img src="https://i.scdn.co/image/ab67616d0000b273484db9b89545facba928d933" class="card-img-top" alt="Born to Die">
+            <div class="card-body">
+              <h5 class="card-title">Born to Die</h5>
+              <p class="card-text text-muted">2012 • Paradise Edition</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-sm btn-outline-primary">Detalhes</a>
+                <small class="text-muted">14 faixas</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card album-card">
+            <img src="https://i.scdn.co/image/ab67616d0000b2730a921fb6a0b94a6d2c6c6c71" class="card-img-top" alt="Ultraviolence">
+            <div class="card-body">
+              <h5 class="card-title">Ultraviolence</h5>
+              <p class="card-text text-muted">2014</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-sm btn-outline-primary">Detalhes</a>
+                <small class="text-muted">11 faixas</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card album-card">
+            <img src="https://i.scdn.co/image/ab67616d00001e02879e9318cb9f4e05ee552ac9" class="card-img-top" alt="Norman Fucking Rockwell">
+            <div class="card-body">
+              <h5 class="card-title">Norman Fucking Rockwell!</h5>
+              <p class="card-text text-muted">2019</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-sm btn-outline-primary">Detalhes</a>
+                <small class="text-muted">14 faixas</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="#" class="btn btn-primary">Ver Discografia Completa</a>
+      </div>
+    </section>
+
+    <!-- Music Player Section -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5 display-4">Ouça Agora</h2>
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <h4>Born to Die</h4>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5VoeRuTrGhTbKelUfwymwu?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+          <div class="col-md-6 mb-4">
+            <h4>Norman Fucking Rockwell</h4>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5XpEKORZ4y6OrCZSKsi46A?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Store Section -->
+    <section id="store" class="py-5">
+      <h2 class="text-center mb-5 display-4">Loja Oficial</h2>
+      <div class="row">
+        <div class="col-md-4 col-lg-3 mb-4">
+          <div class="card product-card h-100">
+            <span class="product-badge">Mais Vendido</span>
+            <img src="https://shop.lanadelrey.com/cdn/shop/products/LDR-Honeymoon-Tee-Black-Front_600x.jpg" class="card-img-top" alt="Camiseta Honeymoon">
+            <div class="card-body">
+              <h5 class="card-title">Camiseta Honeymoon</h5>
+              <p class="card-text">Camiseta preta com estampa do álbum Honeymoon</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="product-price">R$ 129,90</span>
+                <a href="#" class="btn btn-sm btn-primary">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 mb-4">
+          <div class="card product-card h-100">
+            <img src="https://shop.lanadelrey.com/cdn/shop/products/LDR-BTD-Vinyl_600x.jpg" class="card-img-top" alt="Vinil Born to Die">
+            <div class="card-body">
+              <h5 class="card-title">Vinil Born to Die</h5>
+              <p class="card-text">Edição de luxo em vinil 180g</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="product-price">R$ 199,90</span>
+                <a href="#" class="btn btn-sm btn-primary">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 mb-4">
+          <div class="card product-card h-100">
+            <span class="product-badge">Novidade</span>
+            <img src="https://shop.lanadelrey.com/cdn/shop/products/LDR-Chemtrails-Tote-Natural-Front_600x.jpg" class="card-img-top" alt="Eco Bag Chemtrails">
+            <div class="card-body">
+              <h5 class="card-title">Eco Bag Chemtrails</h5>
+              <p class="card-text">Bolsa ecológica com estampa do álbum</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="product-price">R$ 89,90</span>
+                <a href="#" class="btn btn-sm btn-primary">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-3 mb-4">
+          <div class="card product-card h-100">
+            <img src="https://shop.lanadelrey.com/cdn/shop/products/LDR-NFR-Hoodie-Black-Front_600x.jpg" class="card-img-top" alt="Moletom NFR">
+            <div class="card-body">
+              <h5 class="card-title">Moletom NFR!</h5>
+              <p class="card-text">Moletom preto com capuz e estampa</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="product-price">R$ 249,90</span>
+                <a href="#" class="btn btn-sm btn-primary">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="#" class="btn btn-primary">Ver Todos os Produtos</a>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-5">
+      <h2 class="text-center mb-5 display-4">Galeria</h2>
+      <div class="row">
+        <div class="col-md-4 col-sm-6">
+          <div class="gallery-item">
+            <img src="https://i.scdn.co/image/ab67616d00001e0259ae8cf65d498afdd5585634" alt="Lana Del Rey 1" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="gallery-item">
+            <img src="https://revistaogrito.com/wp-content/uploads/2024/11/Copia-de-Imagem-post-padrao-2-15-1155x770.jpg" alt="Lana Del Rey 2" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="gallery-item">
+            <img src="https://atlantidasc-prod.s3.amazonaws.com/wp-content/uploads/2024/02/lana-del-rey.webp" alt="Lana Del Rey 3" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="gallery-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcpsMODC8HytFoe9bcB1dRTt-vq34_qOwTrQRomB2m5TUJrboA6sMEyY0KMGHivOWxfRY&usqp=CAU" alt="Lana Del Rey 4" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="gallery-item">
+            <img src="https://www.showbiz411.com/wp-content/uploads/2019/08/lana-del-rey-kanye-west-instagram.jpg" alt="Lana Del Rey 5" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="gallery-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvAjxkM1QDHeOTizO7r3zbNH7-x8UEs_ahvg&s" alt="Lana Del Rey 6" class="img-fluid">
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="#" class="btn btn-primary">Ver Galeria Completa</a>
+      </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5 display-4">Últimas Notícias</h2>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img src="https://seattletalentbuying.com/wp-content/uploads/Lana_Del_Rey_@_Grammy_Museum_10_13_2019_49311023203.jpg" class="card-img-top" alt="Novo álbum anunciado">
+              <div class="card-body">
+                <h5 class="card-title">Novo álbum anunciado para 2024</h5>
+                <p class="card-text">Lana Del Rey revela detalhes sobre seu próximo álbum em entrevista exclusiva.</p>
+                <a href="#" class="btn btn-sm btn-outline-primary">Ler mais</a>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Publicado há 2 dias</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img src="https://static01.nyt.com/images/2021/03/23/arts/22lana-review1/22lana-review1-articleLarge.jpg?quality=75&auto=webp&disable=upscale" class="card-img-top" alt="Turnê mundial confirmada">
+              <div class="card-body">
+                <h5 class="card-title">Turnê mundial confirmada</h5>
+                <p class="card-text">Cantora anuncia datas para a turnê que passará por 30 cidades ao redor do mundo.</p>
+                <a href="#" class="btn btn-sm btn-outline-primary">Ler mais</a>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Publicado há 1 semana</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img src="https://assets.vogue.com/photos/597266a531d27420159af898/master/pass/00-tout-lana-del-rey.jpg" class="card-img-top" alt="Colaboração inédita">
+              <div class="card-body">
+                <h5 class="card-title">Colaboração inédita revelada</h5>
+                <p class="card-text">Lana Del Rey grava música com artista surpresa; saiba quem é.</p>
+                <a href="#" class="btn btn-sm btn-outline-primary">Ler mais</a>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Publicado há 2 semanas</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-3">
+          <a href="#" class="btn btn-primary">Ver Todas as Notícias</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="py-5">
+      <h2 class="text-center mb-5 display-4">Timeline</h2>
+      <div class="timeline">
+        <div class="row timeline-item">
+          <div class="col-md-6">
+            <div class="timeline-content">
+              <div class="timeline-date">2011</div>
+              <h4>Lançamento de "Video Games"</h4>
+              <p>O single "Video Games" se torna um sucesso viral, levando Lana Del Rey ao estrelato internacional.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row timeline-item justify-content-end">
+          <div class="col-md-6">
+            <div class="timeline-content">
+              <div class="timeline-date">2012</div>
+              <h4>Álbum "Born to Die"</h4>
+              <p>Lançamento do aclamado álbum de estreia "Born to Die", que vendeu mais de 7 milhões de cópias mundialmente.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row timeline-item">
+          <div class="col-md-6">
+            <div class="timeline-content">
+              <div class="timeline-date">2019</div>
+              <h4>"Norman Fucking Rockwell!"</h4>
+              <p>Álbum aclamado pela crítica e indicado ao Grammy de Álbum do Ano.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2 class="mb-4">Assine nossa Newsletter</h2>
+            <p class="mb-4">Receba as últimas notícias, lançamentos e conteúdos exclusivos sobre Lana Del Rey diretamente no seu e-mail.</p>
+            <form class="row g-3 justify-content-center">
+              <div class="col-md-8">
+                <input type="email" class="form-control form-control-lg" placeholder="Seu melhor e-mail">
+              </div>
+              <div class="col-md-2">
+                <button type="submit" class="btn btn-light btn-lg w-100">Assinar</button>
+              </div>
+            </form>
+            <small class="d-block mt-3">Nós respeitamos sua privacidade. Você pode cancelar a assinatura a qualquer momento.</small>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center py-5 bg-dark text-white">
+    <div class="container">
+      <div class="mb-4">
+        <a href="#" class="text-white mx-3 fs-4"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-white mx-3 fs-4"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-white mx-3 fs-4"><i class="fab fa-spotify"></i></a>
+        <a href="#" class="text-white mx-3 fs-4"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="text-white mx-3 fs-4"><i class="fab fa-tiktok"></i></a>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <p class="mb-3">© 2024 Tributo Lana Del Rey. Este é um site não-oficial criado por fãs.</p>
+          <div class="d-flex justify-content-center flex-wrap">
+            <a href="#" class="text-white mx-2 mb-2">Política de Privacidade</a>
+            <a href="#" class="text-white mx-2 mb-2">Termos de Uso</a>
+            <a href="#" class="text-white mx-2 mb-2">Contato</a>
+            <a href="#" class="text-white mx-2 mb-2">FAQ</a>
+            <a href="#" class="text-white mx-2 mb-2">DMCA</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Loading screen
+    window.addEventListener('load', function() {
+      document.getElementById('loading').style.display = 'none';
+    });
+
+    // Dark/Light mode toggle
+    document.getElementById('toggleTheme').addEventListener('click', function() {
+      document.body.classList.toggle('dark-mode');
+      
+      // Change icon based on mode
+      const icon = this.querySelector('i');
+      if (document.body.classList.contains('dark-mode')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+      }
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Lazy loading for images
+    if ('loading' in HTMLImageElement.prototype) {
+      const images = document.querySelectorAll('img[loading="lazy"]');
+      images.forEach(img => {
+        img.src = img.dataset.src;
+      });
+    } else {
+      // Fallback for browsers that don't support lazy loading
+      const script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js';
+      document.body.appendChild(script);
+      script.onload = () => {
+        new LazyLoad();
+      };
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tributo Lana Del Rey | Site Oficial</title>
+  <meta name="description" content="Site tributo completo sobre Lana Del Rey com notícias, discografia, galeria de fotos e muito mais." />
+  <meta property="og:title" content="Tributo Lana Del Rey | Site Oficial">
+  <meta property="og:description" content="Explore o universo de Lana Del Rey com discografia completa, galeria exclusiva e notícias atualizadas.">
+  <meta property="og:image" content="https://i.pinimg.com/736x/1a/97/9f/1a979f2c3526bc2b511c5e916dd1793d.jpg">
+  <meta name="keywords" content="Lana Del Rey, música, Born to Die, Norman Fucking Rockwell, discografia, fã site">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #9a7b6e;
+      --secondary-color: #3a2e2a;
+      --accent-color: #d4af8e;
+      --gold-color: #D4AF37;
+      --text-light: #f8f9fa;
+      --text-dark: #212529;
+      --bg-dark: #121212;
+      --bg-light: #f8f9fa;
+      --card-bg-dark: #1e1e1e;
+      --card-bg-light: #ffffff;
+    }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      transition: all 0.5s ease;
+      overflow-x: hidden;
+    }
+    
+    .dark-mode {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+    }
+    
+    .dark-mode .navbar,
+    .dark-mode footer {
+      background-color: var(--secondary-color) !important;
+    }
+    
+    .dark-mode .card,
+    .dark-mode .timeline-content {
+      background-color: var(--card-bg-dark);
+      border-color: #333;
+      color: var(--text-light);
+    }
+    
+    .dark-mode .bg-light {
+      background-color: #1a1a1a !important;
+    }
+    
+    .dark-mode .text-muted {
+      color: #adb5bd !important;
+    }
+    
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', serif;
+      color: var(--primary-color);
+    }
+    
+    .navbar {
+      background-color: var(--primary-color);
+      padding: 15px 0;
+      transition: all 0.3s;
+    }
+    
+    .navbar.scrolled {
+      padding: 10px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .hero-section {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://i.pinimg.com/736x/1a/97/9f/1a979f2c3526bc2b511c5e916dd1793d.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    
+    .hero-title {
+      font-size: 4rem;
+      font-weight: 700;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    }
+    
+    .album-card, .product-card {
+      transition: transform 0.3s;
+      margin-bottom: 30px;
+      border: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      background-color: var(--card-bg-light);
+    }
+    
+    .dark-mode .album-card,
+    .dark-mode .product-card {
+      background-color: var(--card-bg-dark);
+    }
+    
+    .album-card:hover,
+    .product-card:hover {
+      transform: translateY(-10px);
+    }
+    
+    .product-price {
+      font-size: 1.2rem;
+      color: var(--gold-color);
+      font-weight: bold;
+    }
+    
+    .product-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: var(--gold-color);
+      color: #000;
+      padding: 5px 10px;
+      border-radius: 3px;
+      font-weight: bold;
+      font-size: 0.8rem;
+    }
+    
+    .gallery-item {
+      margin-bottom: 30px;
+      overflow: hidden;
+      border-radius: 5px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+    
+    .gallery-item img {
+      transition: transform 0.5s;
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    
+    .newsletter-section {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 50px 0;
+      margin: 50px 0;
+    }
+    
+    .timeline {
+      position: relative;
+      padding: 40px 0;
+    }
+    
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background-color: var(--primary-color);
+    }
+    
+    .timeline-item {
+      position: relative;
+      margin-bottom: 50px;
+    }
+    
+    .timeline-content {
+      padding: 20px;
+      background-color: var(--card-bg-light);
+      border-radius: 5px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      position: relative;
+    }
+    
+    .timeline-date {
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+
+    /* Botões dourados */
+    .btn-primary, .btn-outline-primary {
+      --bs-btn-color: #000;
+      --bs-btn-bg: var(--gold-color);
+      --bs-btn-border-color: var(--gold-color);
+      --bs-btn-hover-color: #000;
+      --bs-btn-hover-bg: #e6c260;
+      --bs-btn-hover-border-color: #e6c260;
+      --bs-btn-focus-shadow-rgb: 212,175,55;
+      --bs-btn-active-color: #000;
+      --bs-btn-active-bg: #e6c260;
+      --bs-btn-active-border-color: #e6c260;
+      --bs-btn-disabled-color: #000;
+      --bs-btn-disabled-bg: var(--gold-color);
+      --bs-btn-disabled-border-color: var(--gold-color);
+    }
+
+    .btn-outline-primary {
+      --bs-btn-color: var(--gold-color);
+      --bs-btn-bg: transparent;
+      --bs-btn-border-color: var(--gold-color);
+      --bs-btn-hover-color: #000;
+      --bs-btn-hover-bg: var(--gold-color);
+      --bs-btn-hover-border-color: var(--gold-color);
+    }
+    
+    /* Carrossel */
+    .carousel-item img {
+      height: 500px;
+      object-fit: cover;
+    }
+    
+    .carousel-caption {
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      padding: 20px;
+    }
+    
+    /* Notícias */
+    .news-card {
+      transition: all 0.3s ease;
+      margin-bottom: 20px;
+    }
+    
+    .news-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .news-date {
+      color: var(--primary-color);
+      font-weight: bold;
+    }
+    
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      
+      .timeline::before {
+        left: 20px;
+      }
+      
+      .carousel-item img {
+        height: 300px;
+      }
+    }
+    
+    /* Loading animation */
+    .loading {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      border: 3px solid rgba(255,255,255,.3);
+      border-radius: 50%;
+      border-top-color: var(--primary-color);
+      animation: spin 1s ease-in-out infinite;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loading" style="position:fixed;top:0;left:0;width:100%;height:100%;background:var(--bg-dark);z-index:9999;display:flex;justify-content:center;align-items:center;">
+    <div class="loading"></div>
+  </div>
+
+  <header class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <i class="fas fa-star me-2"></i>LANA DEL REY
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#discography">Discografia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#gallery">Galeria</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#news">Notícias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#timeline">Timeline</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#store">Loja</a>
+          </li>
+          <li class="nav-item ms-lg-3">
+            <button class="btn btn-outline-light" id="toggleTheme">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="home">
+    <div class="container">
+      <h1 class="hero-title">LANA DEL REY</h1>
+      <p class="lead fs-3" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">A poetisa do pop moderno</p>
+      <a href="#discography" class="btn btn-primary btn-lg mt-3">Explorar Discografia</a>
+    </div>
+  </section>
+
+  <main class="container">
+    <!-- About Section -->
+    <section id="about" class="py-5">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h2 class="display-4 mb-4">Sobre Lana</h2>
+          <p class="lead">Elizabeth Woolridge Grant, conhecida profissionalmente como Lana Del Rey, é uma cantora, compositora e poetisa americana.</p>
+          <p>Sua música é conhecida por suas referências cinematográficas à cultura pop americana, explorando temas de romances trágicos, glamour e melancolia. Frequentemente chamada de "a cantora mais fascinante do pop alternativo", ela é creditada por popularizar o estilo de música barroco-pop e sadcore.</p>
+          <div class="mt-4">
+            <a href="#" class="btn btn-outline-primary me-2">Biografia Completa</a>
+            <a href="#" class="btn btn-primary">Prêmios</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="https://hollywoodforevertv.com.br/media/uploads/referencias-nas-musicas-de-lana-del-rey.jpg" alt="Lana Del Rey" class="img-fluid rounded shadow">
+        </div>
+      </div>
+    </section>
+
+    <!-- Discography Section -->
+    <section id="discography" class="py-5">
+      <h2 class="text-center mb-5 display-4">Discografia</h2>
+      <div class="row">
+        <div class="col-md-6 col-lg-4">
+          <div class="card album-card">
+            <img src="https://i.scdn.co/image/ab67616d0000b273484db9b89545facba928d933" class="card-img-top" alt="Born to Die">
+            <div class="card-body">
+              <h5 class="card-title">Born to Die</h5>
+              <p class="card-text text-muted">2012 • Paradise Edition</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-sm btn-outline-primary">Detalhes</a>
+                <small class="text-muted">14 faixas</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card album-card">
+            <img src="https://i.scdn.co/image/ab67616d0000b2730a921fb6a0b94a6d2c6c6c71" class="card-img-top" alt="Ultraviolence">
+            <div class="card-body">
+              <h5 class="card-title">Ultraviolence</h5>
+              <p class="card-text text-muted">2014</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-sm btn-outline-primary">Detalhes</a>
+                <small class="text-muted">11 faixas</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card album-card">
+            <img src="https://i.scdn.co/image/ab67616d00001e02879e9318cb9f4e05ee552ac9" class="card-img-top" alt="Norman Fucking Rockwell">
+            <div class="card-body">
+              <h5 class="card-title">Norman Fucking Rockwell!</h5>
+              <p class="card-text text-muted">2019</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <a href="#" class="btn btn-sm btn-outline-primary">Detalhes</a>
+                <small class="text-muted">14 faixas</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="#" class="btn btn-primary">Ver Discografia Completa</a>
+      </div>
+    </section>
+
+    <!-- Gallery Carousel Section -->
+    <section id="gallery" class="py-5">
+      <h2 class="text-center mb-5 display-4">Galeria de Fotos</h2>
+      <div id="lanaCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#lanaCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#lanaCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#lanaCarousel" data-bs-slide-to="2"></button>
+          <button type="button" data-bs-target="#lanaCarousel" data-bs-slide-to="3"></button>
+          <button type="button" data-bs-target="#lanaCarousel" data-bs-slide-to="4"></button>
+        </div>
+        <div class="carousel-inner rounded">
+          <div class="carousel-item active">
+            <img src="https://www.rollingstone.com/wp-content/uploads/2020/05/LanaDelRey.jpg" class="d-block w-100" alt="Lana Del Rey 1">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Lana Del Rey em concerto</h5>
+              <p>Turnê Norman Fucking Rockwell, 2020</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://media.vogue.co.uk/photos/5d544d9f5e6f5e0008fb6e5a/master/pass/Lana%20Del%20Rey%20Vogue%2024%20September%202019%20credit%20Getty%20Images_b.jpg" class="d-block w-100" alt="Lana Del Rey 2">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Sessão de fotos para Vogue</h5>
+              <p>Setembro 2019</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://www.billboard.com/wp-content/uploads/2023/03/lana-del-rey-2023-billboard-1548.jpg" class="d-block w-100" alt="Lana Del Rey 3">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Show no Lollapalooza</h5>
+              <p>Março 2023</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://media.gq.com/photos/5d8e6b8c6a7f3c0008e8f9e1/master/pass/lana-del-rey-gq-10-2019-01.jpg" class="d-block w-100" alt="Lana Del Rey 4">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Entrevista para GQ</h5>
+              <p>Outubro 2019</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://www.nme.com/wp-content/uploads/2021/05/Lana-Del-Rey-2021.jpg" class="d-block w-100" alt="Lana Del Rey 5">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Lançamento do álbum Blue Banisters</h5>
+              <p>Maio 2021</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#lanaCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#lanaCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Próximo</span>
+        </button>
+      </div>
+      
+      <!-- Thumbnail Gallery -->
+      <div class="row mt-5">
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="gallery-item">
+            <img src="https://i.scdn.co/image/ab67616d00001e0259ae8cf65d498afdd5585634" alt="Lana Del Rey 1" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="gallery-item">
+            <img src="https://revistaogrito.com/wp-content/uploads/2024/11/Copia-de-Imagem-post-padrao-2-15-1155x770.jpg" alt="Lana Del Rey 2" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="gallery-item">
+            <img src="https://atlantidasc-prod.s3.amazonaws.com/wp-content/uploads/2024/02/lana-del-rey.webp" alt="Lana Del Rey 3" class="img-fluid">
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <a href="#" class="btn btn-primary">Ver Galeria Completa</a>
+      </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5 display-4">Últimas Notícias</h2>
+        <div class="row">
+          <!-- Notícia 1 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card news-card h-100">
+              <img src="https://www.rollingstone.com/wp-content/uploads/2023/03/Lana-Del-Rey-Did-You-Know-That-Theres-a-Tunnel.jpg" class="card-img-top" alt="Novo álbum">
+              <div class="card-body">
+                <span class="news-date">12 MAR 2024</span>
+                <h4 class="card-title mt-2">Lana Del Rey anuncia nova turnê mundial</h4>
+                <p class="card-text">A cantora revelou as primeiras datas da turnê que promoverá seu mais recente álbum. Os shows incluem passagem pelo Brasil em novembro.</p>
+              </div>
+              <div class="card-footer bg-transparent border-top-0">
+                <a href="#" class="btn btn-outline-primary">Ler mais</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Notícia 2 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card news-card h-100">
+              <img src="https://media.pitchfork.com/photos/645d9f8a7a5d8a9a7f1a6f1a/16:9/w_1280,c_limit/Lana-Del-Rey.jpg" class="card-img-top" alt="Prêmio">
+              <div class="card-body">
+                <span class="news-date">5 MAR 2024</span>
+                <h4 class="card-title mt-2">Lana Del Rey ganha prêmio de Melhor Álbum Alternativo</h4>
+                <p class="card-text">"Did you know that there's a tunnel under Ocean Blvd" foi premiado na cerimônia anual de música alternativa.</p>
+              </div>
+              <div class="card-footer bg-transparent border-top-0">
+                <a href="#" class="btn btn-outline-primary">Ler mais</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Notícia 3 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card news-card h-100">
+              <img src="https://media.vogue.co.uk/photos/5d544d9f5e6f5e0008fb6e5a/master/pass/Lana%20Del%20Rey%20Vogue%2024%20September%202019%20credit%20Getty%20Images_b.jpg" class="card-img-top" alt="Colaboração">
+              <div class="card-body">
+                <span class="news-date">28 FEV 2024</span>
+                <h4 class="card-title mt-2">Nova colaboração com Taylor Swift é confirmada</h4>
+                <p class="card-text">As duas cantoras estão trabalhando em uma música juntas, que deve ser lançada no próximo álbum de Taylor.</p>
+              </div>
+              <div class="card-footer bg-transparent border-top-0">
+                <a href="#" class="btn btn-outline-primary">Ler mais</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <!-- Notícia 4 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card news-card h-100">
+              <img src="https://www.billboard.com/wp-content/uploads/2023/03/lana-del-rey-2023-billboard-1548.jpg" class="card-img-top" alt="Documentário">
+              <div class="card-body">
+                <span class="news-date">20 FEV 2024</span>
+                <h4 class="card-title mt-2">Documentário sobre carreira de Lana será lançado em streaming</h4>
+                <p class="card-text">O filme promete mostrar bastidores da carreira da cantora, com imagens inéditas e depoimentos de familiares.</p>
+              </div>
+              <div class="card-footer bg-transparent border-top-0">
+                <a href="#" class="btn btn-outline-primary">Ler mais</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Notícia 5 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card news-card h-100">
+              <img src="https://media.gq.com/photos/5d8e6b8c6a7f3c0008e8f9e1/master/pass/lana-del-rey-gq-10-2019-01.jpg" class="card-img-top" alt="Livro">
+              <div class="card-body">
+                <span class="news-date">15 FEV 2024</span>
+                <h4 class="card-title mt-2">Lana Del Rey anuncia lançamento de livro de poesias</h4>
+                <p class="card-text">A cantora, que já publicou trabalhos poéticos antes, promete um livro mais pessoal e introspectivo.</p>
+              </div>
+              <div class="card-footer bg-transparent border-top-0">
+                <a href="#" class="btn btn-outline-primary">Ler mais</a>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Notícia 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card news-card h-100">
+              <img src="https://www.nme.com/wp-content/uploads/2021/05/Lana-Del-Rey-2021.jpg" class="card-img-top" alt="Filme">
+              <div class="card-body">
+                <span class="news-date">8 FEV 2024</span>
+                <h4 class="card-title mt-2">Música de Lana será tema de novo filme de Hollywood</h4>
+                <p class="card-text">A canção "Video Games" fará parte da trilha sonora de um grande lançamento cinematográfico deste ano.</p>
+              </div>
+              <div class="card-footer bg-transparent border-top-0">
+                <a href="#" class="btn btn-outline-primary">Ler mais</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-3">
+          <a href="#" class="btn btn-primary">Ver Todas as Notícias</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="py-5">
+      <h2 class="text-center mb-5 display-4">Timeline</h2>
+      <div class="timeline">
+        <div class="row timeline-item">
+          <div class="col-md-6">
+            <div class="timeline-content">
+              <div class="timeline-date">2011</div>
+              <h4>Lançamento de "Video Games"</h4>
+              <p>O single "Video Games" se torna um sucesso viral, levando Lana Del Rey ao estrelato internacional.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row timeline-item justify-content-end">
+          <div class="col-md-6">
+            <div class="timeline-content">
+              <div class="timeline-date">2012</div>
+              <h4>Álbum "Born to Die"</h4>
+              <p>Lançamento do aclamado álbum de estreia "Born to Die", que vendeu mais de 7 milhões de cópias mundialmente.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row timeline-item">
+          <div class="col-md-6">
+            <div class="timeline-content">
+              <div class="timeline-date">2019</div>
+              <h4>"Norman Fucking Rockwell!"</h4>
+              <p>Álbum aclamado pela crítica e indicado ao Grammy de Álbum do Ano.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2 class="mb-4">Assine nossa Newsletter</h2>
+            <p class="mb-4">Receba as últimas notícias, lançamentos e conteúdos exclusivos sobre Lana Del Rey diretamente no seu e-mail.</p>
+            <form class="row g-3 justify-content-center">
+              <div class="col-md-8">
+                <input type="email" class="form-control form-control-lg" placeholder="Seu melhor e-mail">
+              </div>
+              <div class="col-md-2">
+                <button type="submit" class="btn btn-light btn-lg w-100">Assinar</button>
+              </div>
+            </form>
+            <small class="d-block mt-3">Nós respeitamos sua privacidade. Você pode cancelar a assinatura a qualquer momento.</small>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center py-5 bg-dark text-white">
+    <div class="container">
+      <div class="mb-4">
+        <a href="#" class="text-white mx-3 fs-4"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-white mx-3 fs-4"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-white mx-3 fs-4"><i class="fab fa-spotify"></i></a>
+        <a href="#" class="text-white mx-3 fs-4"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="text-white mx-3 fs-4"><i class="fab fa-tiktok"></i></a>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <p class="mb-3">© 2024 Tributo Lana Del Rey. Este é um site não-oficial criado por fãs.</p>
+          <div class="d-flex justify-content-center flex-wrap">
+            <a href="#" class="text-white mx-2 mb-2">Política de Privacidade</a>
+            <a href="#" class="text-white mx-2 mb-2">Termos de Uso</a>
+            <a href="#" class="text-white mx-2 mb-2">Contato</a>
+            <a href="#" class="text-white mx-2 mb-2">FAQ</a>
+            <a href="#" class="text-white mx-2 mb-2">DMCA</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Loading screen
+    window.addEventListener('load', function() {
+      document.getElementById('loading').style.display = 'none';
+    });
+
+    // Dark/Light mode toggle
+    document.getElementById('toggleTheme').addEventListener('click', function() {
+      document.body.classList.toggle('dark-mode');
+      
+      // Change icon based on mode
+      const icon = this.querySelector('i');
+      if (document.body.classList.contains('dark-mode')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+      }
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Initialize carousel with auto-rotation
+    const myCarousel = new bootstrap.Carousel(document.getElementById('lanaCarousel'), {
+      interval: 3000,
+      wrap: true
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
