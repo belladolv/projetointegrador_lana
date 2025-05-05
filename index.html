@@ -38,7 +38,8 @@
         
         .dark-mode .card,
         .dark-mode .timeline-item,
-        .dark-mode .news-card {
+        .dark-mode .news-card,
+        .dark-mode .tour-card {
             background-color: var(--card-bg-dark);
             border-color: #333;
         }
@@ -304,6 +305,75 @@
         .dark-mode .news-excerpt {
             color: #adb5bd;
         }
+
+        /* Tour Section */
+        .tour-section {
+            padding: 60px 0;
+            background-color: #f5f5f5;
+        }
+
+        .dark-mode .tour-section {
+            background-color: #1a1a1a;
+        }
+
+        .tour-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+            background-color: white;
+        }
+
+        .dark-mode .tour-card {
+            background-color: #2a2a2a;
+        }
+
+        .tour-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .tour-date {
+            font-weight: bold;
+            color: var(--gold-color);
+            margin-bottom: 5px;
+        }
+
+        .tour-location {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+        }
+
+        .tour-venue {
+            color: #6c757d;
+            margin-bottom: 15px;
+        }
+
+        .dark-mode .tour-venue {
+            color: #adb5bd;
+        }
+
+        .tour-btn {
+            background-color: var(--primary-color);
+            border: none;
+            width: 100%;
+        }
+
+        .tour-btn:hover {
+            background-color: #8a6d61;
+        }
+
+        .sold-out {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #dc3545;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+        }
         
         /* Efeitos */
         .float-effect {
@@ -385,6 +455,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#music">Música</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tour">Shows</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#timeline">Timeline</a>
@@ -610,6 +683,100 @@
                                     loading="lazy"></iframe>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tour Section -->
+        <section id="tour" class="tour-section py-5">
+            <div class="container">
+                <h2 class="text-center mb-5 display-4 glow-on-hover">Próximos Shows</h2>
+                <div class="row">
+                    <!-- Show 1 -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="tour-card card h-100">
+                            <div class="card-body">
+                                <div class="tour-date">10 SET 2023</div>
+                                <h4 class="tour-location">Nashville, TN</h4>
+                                <p class="tour-venue">Bridgestone Arena</p>
+                                <p><i class="fas fa-map-marker-alt me-2"></i>Nashville, Tennessee, EUA</p>
+                                <a href="#" class="btn tour-btn text-white">Comprar Ingressos</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Show 2 -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="tour-card card h-100">
+                            <div class="card-body">
+                                <div class="tour-date">14 SET 2023</div>
+                                <h4 class="tour-location">Chicago, IL</h4>
+                                <p class="tour-venue">United Center</p>
+                                <p><i class="fas fa-map-marker-alt me-2"></i>Chicago, Illinois, EUA</p>
+                                <a href="#" class="btn tour-btn text-white">Comprar Ingressos</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Show 3 -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="tour-card card h-100">
+                            <div class="card-body">
+                                <div class="tour-date">19 SET 2023</div>
+                                <h4 class="tour-location">Toronto, ON</h4>
+                                <p class="tour-venue">Scotiabank Arena</p>
+                                <p><i class="fas fa-map-marker-alt me-2"></i>Toronto, Canadá</p>
+                                <span class="sold-out">ESGOTADO</span>
+                                <button class="btn tour-btn text-white disabled">Ingressos Esgotados</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Show 4 -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="tour-card card h-100">
+                            <div class="card-body">
+                                <div class="tour-date">24 SET 2023</div>
+                                <h4 class="tour-location">Boston, MA</h4>
+                                <p class="tour-venue">TD Garden</p>
+                                <p><i class="fas fa-map-marker-alt me-2"></i>Boston, Massachusetts, EUA</p>
+                                <a href="#" class="btn tour-btn text-white">Comprar Ingressos</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Show 5 -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="tour-card card h-100">
+                            <div class="card-body">
+                                <div class="tour-date">29 SET 2023</div>
+                                <h4 class="tour-location">Nova York, NY</h4>
+                                <p class="tour-venue">Madison Square Garden</p>
+                                <p><i class="fas fa-map-marker-alt me-2"></i>Nova York, EUA</p>
+                                <a href="#" class="btn tour-btn text-white">Comprar Ingressos</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Show 6 -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                        <div class="tour-card card h-100">
+                            <div class="card-body">
+                                <div class="tour-date">5 OUT 2023</div>
+                                <h4 class="tour-location">Los Angeles, CA</h4>
+                                <p class="tour-venue">Hollywood Bowl</p>
+                                <p><i class="fas fa-map-marker-alt me-2"></i>Los Angeles, Califórnia, EUA</p>
+                                <span class="sold-out">ESGOTADO</span>
+                                <button class="btn tour-btn text-white disabled">Ingressos Esgotados</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <a href="https://www.lanadelrey.com/tour/" target="_blank" class="btn btn-outline-primary">
+                        <i class="fas fa-external-link-alt me-2"></i>Ver todos os shows no site oficial
+                    </a>
                 </div>
             </div>
         </section>
