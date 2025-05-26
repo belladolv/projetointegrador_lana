@@ -455,7 +455,102 @@
         .about-text p {
             margin-bottom: 15px;
         }
-        
+        /* Timeline Styles */
+.timeline-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: var(--gold);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+    left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--cream);
+    border: 4px solid var(--gold);
+    border-radius: 50%;
+    top: 15px;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(odd)::after {
+    right: -10px;
+}
+
+.timeline-item:nth-child(even)::after {
+    left: -10px;
+}
+
+.timeline-content {
+    padding: 20px;
+    background-color: var(--cream);
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+body.dark-mode .timeline-content {
+    background-color: var(--dark-card);
+}
+
+.timeline-date {
+    font-weight: bold;
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+/* Responsive Timeline */
+@media (max-width: 768px) {
+    .timeline-container::before {
+        left: 31px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    
+    .timeline-item::after {
+        left: 21px;
+    }
+    
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+    
+    .timeline-item:nth-child(odd)::after,
+    .timeline-item:nth-child(even)::after {
+        left: 21px;
+    }
+}
         /* Music Section */
         .album-grid {
             display: grid;
@@ -1122,62 +1217,175 @@
             </div>
         </div>
     </section>
-
-    <!-- Music Section -->
-    <section id="music" class="section">
-        <div class="container">
-            <h2 class="section-title">Music</h2>
-            <div class="album-grid">
-                <!-- Álbum 1 -->
-                <div class="album-card">
-                    <img src="https://i.scdn.co/image/ab67616d0000b273acfce11b92e89c270c4a4ede" alt="Did you know that there's a tunnel under Ocean Blvd" class="album-image">
-                    <div class="album-overlay">
-                        <h3 class="album-name">Ocean Blvd</h3>
-                        <p class="album-year">2023</p>
-                        <a href="https://open.spotify.com/album/5HOHne1wzItQlIYmLXLYfZ" class="album-btn" target="_blank">Listen</a>
-                    </div>
-                </div>
-                
-                <!-- Álbum 2 -->
-                <div class="album-card">
-                    <img src="https://i.scdn.co/image/ab67616d0000b2736946deb6f548e464b385ee0e" alt="Blue Banisters" class="album-image">
-                    <div class="album-overlay">
-                        <h3 class="album-name">Blue Banisters</h3>
-                        <p class="album-year">2021</p>
-                        <a href="https://open.spotify.com/album/2wwCc6fcyhp1tfY3J6Javr" class="album-btn" target="_blank">Listen</a>
-                    </div>
-                </div>
-                
-                <!-- Álbum 3 -->
-                <div class="album-card">
-                    <img src="https://i.scdn.co/image/ab67616d0000b273879e9318cb9f4e05ee552ac9" alt="Norman Fucking Rockwell!" class="album-image">
-                    <div class="album-overlay">
-                        <h3 class="album-name">NFR!</h3>
-                        <p class="album-year">2019</p>
-                        <a href="https://open.spotify.com/album/5XpEKORZ4y6OrCZSKsi46A" class="album-btn" target="_blank">Listen</a>
-                    </div>
-                </div>
-                
-                <!-- Álbum 4 -->
-                <div class="album-card">
-                    <img src="https://upload.wikimedia.org/wikipedia/pt/d/db/Chemtrails_over_the_Country_Club_-_Lana_Del_Rey.png" alt="Chemtrails Over the Country Club" class="album-image">
-                    <div class="album-overlay">
-                        <h3 class="album-name">Chemtrails</h3>
-                        <p class="album-year">2021</p>
-                        <a href="https://open.spotify.com/album/6QeosPQpJckkW0Obir5RT8" class="album-btn" target="_blank">Listen</a>
-                    </div>
-                </div>
-                
-                <!-- Álbum 5 -->
-                <div class="album-card">
-                    <img src="https://upload.wikimedia.org/wikipedia/pt/7/74/Ultraviolence.png" alt="Ultraviolence" class="album-image">
-                    <div class="album-overlay">
-                        <h3 class="album-name">Ultraviolence</h3>
-                        <p class="album-year">2014</p>
-                        <a href="https://open.spotify.com/album/1ORxRsK3MrSLvh7VQTF01F" class="album-btn" target="_blank">Listen</a>
-                    </div>
+    <!-- Logo após a seção About, antes da seção Music -->
+<section id="timeline" class="section">
+    <div class="container">
+        <h2 class="section-title">Career Timeline</h2>
+        <div class="timeline-container">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item">
+                <div class="timeline-date">2005</div>
+                <div class="timeline-content">
+                    <h3>Início da Carreira</h3>
+                    <p>Lana começa a se apresentar em clubes de Nova York sob o nome Lizzy Grant e lança seu primeiro EP, "Kill Kill"</p>
                 </div>
             </div>
+            
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item">
+                <div class="timeline-date">2010</div>
+                <div class="timeline-content">
+                    <h3>Nascimento de Lana Del Rey</h3>
+                    <p>Adota o nome artístico Lana Del Rey e lança o single "Video Games", que se torna viral</p>
+                </div>
+            </div>
+            
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item">
+                <div class="timeline-date">2012</div>
+                <div class="timeline-content">
+                    <h3>Born to Die</h3>
+                    <p>Lança seu álbum de estreia major label, "Born to Die", que alcança o top 10 em vários países</p>
+                </div>
+            </div>
+            
+            <!-- Timeline Item 4 -->
+            <div class="timeline-item">
+                <div class="timeline-date">2014</div>
+                <div class="timeline-content">
+                    <h3>Ultraviolence</h3>
+                    <p>Lança "Ultraviolence", seu primeiro álbum a alcançar o número 1 nos EUA</p>
+                </div>
+            </div>
+            
+            <!-- Timeline Item 5 -->
+            <div class="timeline-item">
+                <div class="timeline-date">2017</div>
+                <div class="timeline-content">
+                    <h3>Lust for Life</h3>
+                    <p>Lança seu quarto álbum de estúdio, apresentando várias colaborações</p>
+                </div>
+            </div>
+            
+            <!-- Timeline Item 6 -->
+            <div class="timeline-item">
+                <div class="timeline-date">2019</div>
+                <div class="timeline-content">
+                    <h3>Norman Fucking Rockwell!</h3>
+                    <p>Lança o aclamado álbum "NFR!", indicado ao Grammy de Álbum do Ano</p>
+                </div>
+            </div>
+            
+            <!-- Timeline Item 7 -->
+            <div class="timeline-item">
+                <div class="timeline-date">2021</div>
+                <div class="timeline-content">
+                    <h3>Dois álbuns em um ano</h3>
+                    <p>Lança "Chemtrails Over the Country Club" em março e "Blue Banisters" em outubro</p>
+                </div>
+            </div>
+            
+            <!-- Timeline Item 8 -->
+            <div class="timeline-item">
+                <div class="timeline-date">2023</div>
+                <div class="timeline-content">
+                    <h3>Did you know...</h3>
+                    <p>Lança seu nono álbum de estúdio, "Did you know that there's a tunnel under Ocean Blvd"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Music Section -->
+<section id="music" class="section">
+    <div class="container">
+        <h2 class="section-title">Music</h2>
+        <div class="album-grid">
+            <!-- Álbum 1 -->
+            <div class="album-card">
+                <img src="https://i.scdn.co/image/ab67616d0000b273acfce11b92e89c270c4a4ede" alt="Did you know that there's a tunnel under Ocean Blvd" class="album-image">
+                <div class="album-overlay">
+                    <h3 class="album-name">Ocean Blvd</h3>
+                    <p class="album-year">2023</p>
+                    <a href="https://open.spotify.com/album/5HOHne1wzItQlIYmLXLYfZ" class="album-btn" target="_blank">Listen</a>
+                </div>
+            </div>
+            
+            <!-- Álbum 2 -->
+            <div class="album-card">
+                <img src="https://i.scdn.co/image/ab67616d0000b2736946deb6f548e464b385ee0e" alt="Blue Banisters" class="album-image">
+                <div class="album-overlay">
+                    <h3 class="album-name">Blue Banisters</h3>
+                    <p class="album-year">2021</p>
+                    <a href="https://open.spotify.com/album/2wwCc6fcyhp1tfY3J6Javr" class="album-btn" target="_blank">Listen</a>
+                </div>
+            </div>
+            
+            <!-- Álbum 3 -->
+            <div class="album-card">
+                <img src="https://i.scdn.co/image/ab67616d0000b273879e9318cb9f4e05ee552ac9" alt="Norman Fucking Rockwell!" class="album-image">
+                <div class="album-overlay">
+                    <h3 class="album-name">NFR!</h3>
+                    <p class="album-year">2019</p>
+                    <a href="https://open.spotify.com/album/5XpEKORZ4y6OrCZSKsi46A" class="album-btn" target="_blank">Listen</a>
+                </div>
+            </div>
+            
+            <!-- Álbum 4 -->
+            <div class="album-card">
+                <img src="https://upload.wikimedia.org/wikipedia/pt/d/db/Chemtrails_over_the_Country_Club_-_Lana_Del_Rey.png" alt="Chemtrails Over the Country Club" class="album-image">
+                <div class="album-overlay">
+                    <h3 class="album-name">Chemtrails</h3>
+                    <p class="album-year">2021</p>
+                    <a href="https://open.spotify.com/album/6QeosPQpJckkW0Obir5RT8" class="album-btn" target="_blank">Listen</a>
+                </div>
+            </div>
+            
+            <!-- Álbum 5 -->
+            <div class="album-card">
+                <img src="https://upload.wikimedia.org/wikipedia/pt/7/74/Ultraviolence.png" alt="Ultraviolence" class="album-image">
+                <div class="album-overlay">
+                    <h3 class="album-name">Ultraviolence</h3>
+                    <p class="album-year">2014</p>
+                    <a href="https://open.spotify.com/album/1ORxRsK3MrSLvh7VQTF01F" class="album-btn" target="_blank">Listen</a>
+                </div>
+            </div>
+
+            <!-- Álbum 6 -->
+            <div class="album-card">
+                <img src="https://i.scdn.co/image/ab67616d0000b27326bcb60d9e0418691b3c1cf3" alt="Born to Die" class="album-image">
+                <div class="album-overlay">
+                    <h3 class="album-name">Born to Die</h3>
+                    <p class="album-year">2012</p>
+                    <a href="https://open.spotify.com/album/1nHMAkfg8sCpyTf98brHzF" class="album-btn" target="_blank">Listen</a>
+                </div>
+            </div>
+            
+            <!-- Álbum 7 -->
+            <div class="album-card">
+                <img src="https://i.scdn.co/image/ab67616d0000b273a5e60f6ef11f9fe7f6b6a404" alt="Lust for Life" class="album-image">
+                <div class="album-overlay">
+                    <h3 class="album-name">Lust for Life</h3>
+                    <p class="album-year">2017</p>
+                    <a href="https://open.spotify.com/album/5ykFQ0EC8H1uBDl1nF25si" class="album-btn" target="_blank">Listen</a>
+                </div>
+            </div>
+            
+            <!-- Álbum 8 -->
+            <div class="album-card">
+                <img src="https://i.scdn.co/image/ab67616d0000b2739d9f7bb8a4a1683e68e6e67f" alt="Honeymoon" class="album-image">
+                <div class="album-overlay">
+                    <h3 class="album-name">Honeymoon</h3>
+                    <p class="album-year">2015</p>
+                    <a href="https://open.spotify.com/album/4VZyLfWVvlgjl3hy7lb9nM" class="album-btn" target="_blank">Listen</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+            
                
             <!-- Spotify Players -->
             <div class="spotify-players">
