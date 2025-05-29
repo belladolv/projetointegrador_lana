@@ -3,29 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lana Del Rey | Official Website</title>
-    <meta name="description" content="Site oficial de Lana Del Rey com discografia, tour dates, loja e notícias">
-    <meta name="keywords" content="Lana Del Rey, música, álbuns, tour, loja, poesia">
+    <title>Lana Del Rey | Site Oficial</title>
+    <meta name="description" content="Site oficial de Lana Del Rey com discografia, datas de turnê, loja e notícias">
+    <meta name="keywords" content="Lana Del Rey, música, álbuns, turnê, loja, poesia">
     <meta name="author" content="Lana Del Rey">
     
-    <!-- Open Graph / Facebook -->
+    <!-- Meta tags para redes sociais -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.lanadelrey.com/">
-    <meta property="og:title" content="Lana Del Rey | Official Website">
-    <meta property="og:description" content="Site oficial de Lana Del Rey com discografia, tour dates, loja e notícias">
+    <meta property="og:title" content="Lana Del Rey | Site Oficial">
+    <meta property="og:description" content="Site oficial de Lana Del Rey com discografia, datas de turnê, loja e notícias">
     <meta property="og:image" content="https://www.lanadelrey.com/images/share-image.jpg">
     
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.lanadelrey.com/">
-    <meta property="twitter:title" content="Lana Del Rey | Official Website">
-    <meta property="twitter:description" content="Site oficial de Lana Del Rey com discografia, tour dates, loja e notícias">
+    <meta property="twitter:title" content="Lana Del Rey | Site Oficial">
+    <meta property="twitter:description" content="Site oficial de Lana Del Rey com discografia, datas de turnê, loja e notícias">
     <meta property="twitter:image" content="https://www.lanadelrey.com/images/share-image.jpg">
     
+    <!-- Links para fontes e ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
+        /* Cores principais do site */
         :root {
             --cream: #F5F0E8;
             --dark-brown: #3A3226;
@@ -34,18 +35,19 @@
             --black: #1A1A1A;
             --white: #FFFFFF;
             
-            /* Dark mode variables */
+            /* Cores para o modo escuro */
             --dark-bg: #121212;
             --dark-text: #E0E0E0;
             --dark-card: #1E1E1E;
             --dark-accent: #C0A080;
             
-            /* Extreme Dark Mode */
+            /* Cores para o modo extremo (fã) */
             --extreme-dark: #000000;
             --extreme-gold: #D4AF37;
             --extreme-light: rgba(212, 175, 55, 0.1);
         }
         
+        /* Reset básico */
         * {
             margin: 0;
             padding: 0;
@@ -56,6 +58,7 @@
             scroll-behavior: smooth;
         }
         
+        /* Estilos gerais do corpo */
         body {
             font-family: 'Montserrat', sans-serif;
             background-color: var(--cream);
@@ -65,11 +68,13 @@
             transition: all 0.5s ease;
         }
         
+        /* Modo escuro */
         body.dark-mode {
             background-color: var(--dark-bg);
             color: var(--dark-text);
         }
         
+        /* Modo extremo para fãs */
         body.extreme-dark-mode {
             background-color: var(--extreme-dark);
             color: var(--extreme-gold);
@@ -77,27 +82,7 @@
             --light-gold: var(--extreme-light);
         }
         
-        body.extreme-dark-mode .section-title::after,
-        body.extreme-dark-mode .hero-overlay {
-            background-color: var(--extreme-gold);
-        }
-        
-        body.extreme-dark-mode .album-overlay,
-        body.extreme-dark-mode .gallery-caption {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-        
-        body.extreme-dark-mode .back-to-top,
-        body.extreme-dark-mode .dark-mode-toggle i {
-            color: var(--extreme-gold);
-        }
-        
-        body.extreme-dark-mode .back-to-top:hover {
-            background-color: var(--extreme-gold);
-            color: var(--extreme-dark);
-        }
-        
-        /* Rain effect for extreme dark mode */
+        /* Efeito de chuva para o modo extremo */
         .rain {
             position: fixed;
             top: 0;
@@ -131,13 +116,14 @@
             }
         }
         
+        /* Estilos de tipografia */
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Cinzel', serif;
             font-weight: 400;
             letter-spacing: 1px;
         }
         
-        /* Loader */
+        /* Loader de carregamento */
         .loader {
             position: fixed;
             top: 0;
@@ -177,7 +163,7 @@
             }
         }
         
-        /* Back to Top Button */
+        /* Botão de voltar ao topo */
         .back-to-top {
             position: fixed;
             bottom: 30px;
@@ -213,7 +199,7 @@
             color: var(--dark-bg);
         }
         
-        /* Header */
+        /* Cabeçalho */
         header {
             position: fixed;
             top: 0;
@@ -258,6 +244,7 @@
             color: var(--dark-accent);
         }
         
+        /* Navegação */
         nav ul {
             display: flex;
             list-style: none;
@@ -280,7 +267,7 @@
         
         body.dark-mode nav ul li a,
         body.extreme-dark-mode nav ul li a {
-            color: var(--dark-text);
+            color: var(--light-gold);
         }
         
         nav ul li a:hover {
@@ -302,6 +289,7 @@
             width: 100%;
         }
         
+        /* Botão do menu mobile */
         .mobile-menu-btn {
             display: none;
             background: none;
@@ -313,10 +301,42 @@
         
         body.dark-mode .mobile-menu-btn,
         body.extreme-dark-mode .mobile-menu-btn {
-            color: var(--dark-text);
+            color: var(--light-gold);
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
         }
         
-        /* Dark mode toggle */
+        /* Seletor de idioma */
+        .language-selector {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        
+        .language-selector img {
+            width: 20px;
+            height: auto;
+            margin-right: 8px;
+            border-radius: 2px;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        }
+        
+        body.dark-mode .language-selector img,
+        body.extreme-dark-mode .language-selector img {
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+        }
+        
+        .language-selector .toggle-text {
+            font-size: 14px;
+            color: var(--dark-brown);
+        }
+        
+        body.dark-mode .language-selector .toggle-text,
+        body.extreme-dark-mode .language-selector .toggle-text {
+            color: var(--light-gold);
+        }
+        
+        /* Botão do modo escuro */
         .dark-mode-toggle {
             display: flex;
             align-items: center;
@@ -340,7 +360,7 @@
             letter-spacing: 1px;
         }
         
-        /* Extreme dark mode toggle */
+        /* Botão do modo extremo (fã) */
         .extreme-dark-toggle {
             display: none;
             align-items: center;
@@ -356,7 +376,7 @@
             display: flex;
         }
         
-        /* Hero Section */
+        /* Seção Hero (principal) */
         .hero {
             height: 100vh;
             min-height: 700px;
@@ -463,7 +483,7 @@
             color: var(--extreme-dark);
         }
         
-        /* Sections */
+        /* Estilos das seções */
         .section {
             padding: 100px 0;
             opacity: 0;
@@ -512,7 +532,7 @@
             padding: 0 20px;
         }
         
-        /* About Section */
+        /* Seção Sobre */
         #about {
             background-color: var(--light-gold);
         }
@@ -564,7 +584,7 @@
             margin-bottom: 15px;
         }
         
-        /* Timeline Styles */
+        /* Linha do tempo */
         .timeline-container {
             position: relative;
             max-width: 800px;
@@ -641,7 +661,7 @@
             margin-bottom: 10px;
         }
         
-        /* Responsive Timeline */
+        /* Linha do tempo responsiva */
         @media (max-width: 768px) {
             .timeline-container::before {
                 left: 31px;
@@ -667,7 +687,7 @@
             }
         }
         
-        /* Awards Section */
+        /* Seção de Prêmios */
         #awards {
             background-color: var(--light-gold);
         }
@@ -710,6 +730,11 @@
             text-align: center;
         }
         
+        body.dark-mode .award-icon i,
+        body.extreme-dark-mode .award-icon i {
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+        
         .award-info h3 {
             margin-bottom: 10px;
             font-size: 18px;
@@ -725,7 +750,7 @@
             color: var(--dark-text);
         }
         
-        /* Influences Section */
+        /* Seção de Influências */
         #influences {
             background-color: var(--light-gold);
         }
@@ -835,7 +860,7 @@
             gap: 5px;
         }
         
-        /* Spotify Stats Section */
+        /* Seção de Estatísticas do Spotify */
         #spotify-stats {
             background-color: var(--light-gold);
         }
@@ -870,6 +895,11 @@
             margin-bottom: 20px;
         }
         
+        body.dark-mode .stat-icon i,
+        body.extreme-dark-mode .stat-icon i {
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+        
         .stat-number {
             font-size: 48px;
             font-weight: 700;
@@ -895,7 +925,7 @@
             align-items: center;
         }
         
-        /* Music Section */
+        /* Seção de Música */
         .album-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -988,7 +1018,7 @@
             color: var(--dark-card);
         }
         
-        /* Spotify Players Section */
+        /* Players do Spotify */
         .spotify-players {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1023,7 +1053,7 @@
             color: var(--dark-text);
         }
         
-        /* Gallery Section */
+        /* Seção de Galeria */
         #gallery {
             background-color: var(--light-gold);
         }
@@ -1075,7 +1105,7 @@
             opacity: 1;
         }
         
-        /* Tour Section */
+        /* Seção de Turnê */
         #tour {
             background-color: var(--light-gold);
         }
@@ -1150,7 +1180,7 @@
             letter-spacing: 1px;
         }
         
-        /* Store Section */
+        /* Seção de Loja */
         .store-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -1235,7 +1265,7 @@
             color: var(--dark-card);
         }
         
-        /* Poetry Section */
+        /* Seção de Poesia */
         #poetry {
             background-color: var(--light-gold);
         }
@@ -1262,7 +1292,7 @@
             color: var(--dark-text);
         }
         
-        /* Newsletter */
+        /* Seção de Newsletter */
         .newsletter {
             background-color: var(--dark-brown);
             color: var(--cream);
@@ -1323,7 +1353,7 @@
             background-color: var(--light-gold);
         }
         
-        /* Newsletter Success Message */
+        /* Mensagem de sucesso da newsletter */
         .newsletter-success {
             display: none;
             max-width: 500px;
@@ -1334,7 +1364,7 @@
             color: var(--cream);
         }
         
-        /* Footer */
+        /* Rodapé */
         footer {
             background-color: var(--dark-brown);
             color: var(--cream);
@@ -1399,11 +1429,18 @@
         .social-links a {
             color: var(--cream);
             font-size: 16px;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        }
+        
+        body.dark-mode .social-links a,
+        body.extreme-dark-mode .social-links a {
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
         }
         
         .social-links a:hover {
             color: var(--gold);
+            text-shadow: 0 0 10px rgba(192, 160, 128, 0.8);
         }
         
         .copyright {
@@ -1415,7 +1452,7 @@
             color: var(--gold);
         }
         
-        /* Easter Egg Modal */
+        /* Modal do Easter Egg */
         .easter-egg-modal {
             position: fixed;
             top: 0;
@@ -1476,7 +1513,7 @@
             color: var(--dark-text);
         }
         
-        /* Responsive */
+        /* Responsividade */
         @media (max-width: 992px) {
             .hero-title {
                 font-size: 4rem;
@@ -1526,7 +1563,8 @@
             }
             
             .dark-mode-toggle,
-            .extreme-dark-toggle {
+            .extreme-dark-toggle,
+            .language-selector {
                 margin-left: 0;
                 margin-top: 20px;
                 justify-content: center;
@@ -1576,18 +1614,80 @@
                 margin-top: 10px;
             }
         }
+        /* Estilos para o Google Translate */
+#google_translate_element {
+    margin-left: 20px;
+}
+
+.goog-te-gadget {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 14px !important;
+    color: var(--dark-brown) !important;
+}
+
+body.dark-mode .goog-te-gadget,
+body.extreme-dark-mode .goog-te-gadget {
+    color: var(--light-gold) !important;
+}
+
+.goog-te-gadget .goog-te-combo {
+    background-color: var(--cream);
+    color: var(--dark-brown);
+    border: 1px solid var(--gold);
+    border-radius: 4px;
+    padding: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body.dark-mode .goog-te-gadget .goog-te-combo,
+body.extreme-dark-mode .goog-te-gadget .goog-te-combo {
+    background-color: var(--dark-card);
+    color: var(--dark-text);
+    border-color: var(--dark-accent);
+}
+
+.goog-te-banner-frame {
+    display: none !important;
+}
+
+body {
+    top: 0 !important;
+}/* Estilo do botão */
+#google_translate_element select {
+    background-color: #4CAF50; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de ponteiro */
+    transition: background-color 0.3s, transform 0.3s; /* Animações de transição */
+}
+
+/* Efeito ao passar o mouse */
+#google_translate_element select:hover {
+    background-color: #45a049; /* Cor mais escura ao passar o mouse */
+    transform: scale(1.1); /* Aumenta levemente o botão */
+}
+
+/* Foco */
+#google_translate_element select:focus {
+    outline: none; /* Remove o contorno padrão */
+    box-shadow: 0 0 5px rgba(72, 166, 95, 0.6); /* Adiciona sombra ao focar */
+}
+
     </style>
 </head>
 <body>
-    <!-- Loader -->
+    <!-- Tela de carregamento -->
     <div class="loader">
         <div class="loader-spinner"></div>
     </div>
 
-    <!-- Rain effect for extreme dark mode -->
+    <!-- Efeito de chuva para o modo fã -->
     <div class="rain" id="rainEffect"></div>
 
-    <!-- Easter Egg Modal -->
+    <!-- Modal do Easter Egg -->
     <div class="easter-egg-modal" id="easterEggModal">
         <div class="easter-egg-content">
             <button class="close-modal" id="closeModal">&times;</button>
@@ -1598,12 +1698,12 @@
         </div>
     </div>
 
-    <!-- Back to Top Button -->
+    <!-- Botão de voltar ao topo -->
     <div class="back-to-top" title="Voltar ao topo">
         <i class="fas fa-arrow-up"></i>
     </div>
 
-    <!-- Header -->
+    <!-- Cabeçalho -->
     <header>
         <div class="header-container">
             <a href="#" class="logo">LANA DEL REY</a>
@@ -1612,29 +1712,36 @@
             </button>
             <nav>
                 <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#awards">Awards</a></li>
-                    <li><a href="#influences">Influences</a></li>
-                    <li><a href="#music">Music</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#awards">Prêmios</a></li>
+                    <li><a href="#influences">Influências</a></li>
+                    <li><a href="#music">Música</a></li>
                     <li><a href="#spotify-stats">Spotify</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#tour">Tour</a></li>
-                    <li><a href="#store">Store</a></li>
+                    <li><a href="#gallery">Galeria</a></li>
+                    <li><a href="#tour">Turnê</a></li>
+                    <li><a href="#store">Loja</a></li>
                     <li><a href="#newsletter">Newsletter</a></li>
                     <li class="dark-mode-toggle" id="darkModeToggle">
                         <i class="fas fa-moon"></i>
-                        <span class="toggle-text">Dark Mode</span>
+                        <span class="toggle-text">Modo Escuro</span>
                     </li>
                     <li class="extreme-dark-toggle" id="extremeDarkToggle">
                         <i class="fas fa-star"></i>
-                        <span class="toggle-text">Fan Mode</span>
+                        <span class="toggle-text">Modo Fã</span>
                     </li>
+                 <li>
+    <div id="google_translate_element"></div>
+</li>
+    <span class="toggle-text" id="currentLanguage">PT</span>
+</li>
+<!-- Google Translate Script -->
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Seção Hero (Principal) -->
     <section class="hero">
         <div class="video-container">
             <iframe src="https://hollywoodforevertv.com.br/media/uploads/revista-blue-banisters-maiores-albuns-ano.jpg" frameborder="0" allowfullscreen></iframe>
@@ -1643,41 +1750,41 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="hero-title">Lana Del Rey</h1>
-            <p class="hero-subtitle">New album 'Did you know that there's a tunnel under Ocean Blvd' out now</p>
-            <a href="#music" class="hero-btn">Listen Now</a>
+            <p class="hero-subtitle">Novo álbum 'Did you know that there's a tunnel under Ocean Blvd' disponível agora</p>
+            <a href="#music" class="hero-btn">Ouvir Agora</a>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- Seção Sobre -->
     <section id="about" class="section">
         <div class="container">
-            <h2 class="section-title">About</h2>
+            <h2 class="section-title">Sobre</h2>
             <div class="about-content">
                 <div class="about-image">
                     <img src="https://media.gettyimages.com/id/820001030/pt/foto/los-angeles-ca-singer-songwriter-lana-del-rey-performs-for-a-spotify-event-of-her-new-album.jpg?s=612x612&w=0&k=20&c=dwrz6U_OIWkcWwFOEkFQr4c-ujDXwKx0A08eX24YdLs=" alt="Lana Del Rey">
                 </div>
                 <div class="about-text">
                     <h3>Elizabeth Woolridge Grant</h3>
-                    <p>Lana Del Rey, born Elizabeth Woolridge Grant on June 21, 1985, is an American singer-songwriter. Her music is noted for its cinematic quality and exploration of tragic romance, glamour, and melancholia, with frequent references to contemporary pop culture and 1950s–1970s Americana.</p>
-                    <p>She has received numerous accolades throughout her career, including two Brit Awards, two MTV Europe Music Awards, and a Satellite Award, in addition to nominations for six Grammy Awards and a Golden Globe Award.</p>
-                    <p>Del Rey's major label debut, Born to Die (2012), was an international success and spawned the hit single "Summertime Sadness". Her critically acclaimed third album, Ultraviolence (2014), featured greater use of guitar-driven instrumentation and debuted atop the U.S. Billboard 200.</p>
+                    <p>Lana Del Rey, nascida Elizabeth Woolridge Grant em 21 de junho de 1985, é uma cantora e compositora americana. Sua música é conhecida por sua qualidade cinematográfica e exploração de romances trágicos, glamour e melancolia, com frequentes referências à cultura pop contemporânea e ao estilo americano das décadas de 1950 a 1970.</p>
+                    <p>Ela recebeu inúmeros prêmios ao longo de sua carreira, incluindo dois Brit Awards, dois MTV Europe Music Awards e um Satellite Award, além de indicações para seis Grammy Awards e um Golden Globe Award.</p>
+                    <p>Seu álbum de estreia em uma grande gravadora, Born to Die (2012), foi um sucesso internacional e gerou o hit "Summertime Sadness". Seu aclamado terceiro álbum, Ultraviolence (2014), apresentou maior uso de instrumentação com guitarras e estreou no topo da Billboard 200 dos EUA.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Awards Section -->
+    <!-- Seção de Prêmios -->
     <section id="awards" class="section">
         <div class="container">
-            <h2 class="section-title">Awards & Recognition</h2>
+            <h2 class="section-title">Prêmios & Reconhecimento</h2>
             <div class="awards-grid">
                 <div class="award-card">
                     <div class="award-icon">
                         <i class="fas fa-trophy"></i>
                     </div>
                     <div class="award-info">
-                        <h3>Grammy Nominations</h3>
-                        <p>6 nominations including Album of the Year for Norman Fucking Rockwell!</p>
+                        <h3>Indicações ao Grammy</h3>
+                        <p>6 indicações incluindo Álbum do Ano por Norman Fucking Rockwell!</p>
                     </div>
                 </div>
                 <div class="award-card">
@@ -1686,7 +1793,7 @@
                     </div>
                     <div class="award-info">
                         <h3>Brit Awards</h3>
-                        <p>Winner of International Female Solo Artist (2013, 2015)</p>
+                        <p>Vencedora de Artista Solo Feminina Internacional (2013, 2015)</p>
                     </div>
                 </div>
                 <div class="award-card">
@@ -1695,7 +1802,7 @@
                     </div>
                     <div class="award-info">
                         <h3>MTV Europe Music Awards</h3>
-                        <p>Best Alternative Artist (2013, 2015)</p>
+                        <p>Melhor Artista Alternativo (2013, 2015)</p>
                     </div>
                 </div>
                 <div class="award-card">
@@ -1704,7 +1811,7 @@
                     </div>
                     <div class="award-info">
                         <h3>Satellite Award</h3>
-                        <p>Best Original Song for "Young and Beautiful"</p>
+                        <p>Melhor Canção Original por "Young and Beautiful"</p>
                     </div>
                 </div>
                 <div class="award-card">
@@ -1712,8 +1819,8 @@
                         <i class="fas fa-globe"></i>
                     </div>
                     <div class="award-info">
-                        <h3>Golden Globe Nomination</h3>
-                        <p>Best Original Song for "Big Eyes"</p>
+                        <h3>Indicação ao Golden Globe</h3>
+                        <p>Melhor Canção Original por "Big Eyes"</p>
                     </div>
                 </div>
                 <div class="award-card">
@@ -1722,21 +1829,21 @@
                     </div>
                     <div class="award-info">
                         <h3>Billboard Music Awards</h3>
-                        <p>Top Soundtrack for "Young and Beautiful"</p>
+                        <p>Melhor Trilha Sonora por "Young and Beautiful"</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Influences Section -->
+    <!-- Seção de Influências -->
     <section id="influences" class="section">
         <div class="container">
-            <h2 class="section-title">Influences & Collaborations</h2>
+            <h2 class="section-title">Influências & Colaborações</h2>
             <div class="influences-tabs">
-                <button class="tab-btn active" data-tab="musical">Musical Influences</button>
-                <button class="tab-btn" data-tab="literary">Literary Influences</button>
-                <button class="tab-btn" data-tab="collaborations">Collaborations</button>
+                <button class="tab-btn active" data-tab="musical">Influências Musicais</button>
+                <button class="tab-btn" data-tab="literary">Influências Literárias</button>
+                <button class="tab-btn" data-tab="collaborations">Colaborações</button>
             </div>
             
             <div class="tab-content active" id="musical">
@@ -1745,24 +1852,24 @@
                         <img src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTgwNDkyNjQzNjMxNjI4OTYw/gettyimages-515263352.jpg" alt="Elvis Presley" class="influence-image">
                         <div class="influence-info">
                             <h3>Elvis Presley</h3>
-                            <p>The King of Rock and Roll's style and persona have deeply influenced Lana's retro aesthetic and vocal delivery.</p>
-                            <a href="https://open.spotify.com/playlist/37i9dQZF1DZ06evO1sXm1D" class="influence-link" target="_blank">Listen <i class="fas fa-external-link-alt"></i></a>
+                            <p>O estilo e persona do Rei do Rock influenciaram profundamente a estética retrô e a entrega vocal de Lana.</p>
+                            <a href="https://open.spotify.com/playlist/37i9dQZF1DZ06evO1sXm1D" class="influence-link" target="_blank">Ouvir <i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                     <div class="influence-card">
                         <img src="https://www.billboard.com/wp-content/uploads/2022/06/nina-simone-billboard-1548.jpg" alt="Nina Simone" class="influence-image">
                         <div class="influence-info">
                             <h3>Nina Simone</h3>
-                            <p>Lana has cited Simone's emotional depth and jazz influences as inspiration for her own melancholic style.</p>
-                            <a href="https://open.spotify.com/playlist/37i9dQZF1DXa41CMuUARjl" class="influence-link" target="_blank">Listen <i class="fas fa-external-link-alt"></i></a>
+                            <p>Lana citou a profundidade emocional e influências de jazz de Simone como inspiração para seu próprio estilo melancólico.</p>
+                            <a href="https://open.spotify.com/playlist/37i9dQZF1DXa41CMuUARjl" class="influence-link" target="_blank">Ouvir <i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                     <div class="influence-card">
                         <img src="https://media.npr.org/assets/img/2014/08/07/loureed_sq-4b2b0a9c1d5a5a8a5a8e3a5a5a5a5a5a5a5a5a5.jpg" alt="Lou Reed" class="influence-image">
                         <div class="influence-info">
                             <h3>Lou Reed</h3>
-                            <p>The Velvet Underground frontman's poetic lyrics and gritty New York stories resonate in Lana's work.</p>
-                            <a href="https://open.spotify.com/playlist/37i9dQZF1DX3fXJqxGjuEP" class="influence-link" target="_blank">Listen <i class="fas fa-external-link-alt"></i></a>
+                            <p>As letras poéticas e histórias cruas de Nova York do líder do Velvet Underground ressoam no trabalho de Lana.</p>
+                            <a href="https://open.spotify.com/playlist/37i9dQZF1DX3fXJqxGjuEP" class="influence-link" target="_blank">Ouvir <i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1774,24 +1881,24 @@
                         <img src="https://media.newyorker.com/photos/59095f3e8b51cf59fc422abf/master/pass/Allen-Ginsberg-Paterson.jpg" alt="Allen Ginsberg" class="influence-image">
                         <div class="influence-info">
                             <h3>Allen Ginsberg</h3>
-                            <p>The Beat poet's raw, confessional style influenced Lana's lyrical approach, especially in her book of poetry.</p>
-                            <a href="https://www.poetryfoundation.org/poets/allen-ginsberg" class="influence-link" target="_blank">Read <i class="fas fa-external-link-alt"></i></a>
+                            <p>O estilo cru e confessional do poeta beat influenciou a abordagem lírica de Lana, especialmente em seu livro de poesia.</p>
+                            <a href="https://www.poetryfoundation.org/poets/allen-ginsberg" class="influence-link" target="_blank">Ler <i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                     <div class="influence-card">
                         <img src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTE5NTU2MzE2Mjg0ODA5OTQ3/walt-whitman-9530126-1-402.jpg" alt="Walt Whitman" class="influence-image">
                         <div class="influence-info">
                             <h3>Walt Whitman</h3>
-                            <p>Lana has referenced Whitman's free verse and celebration of American life as influences on her songwriting.</p>
-                            <a href="https://www.poetryfoundation.org/poets/walt-whitman" class="influence-link" target="_blank">Read <i class="fas fa-external-link-alt"></i></a>
+                            <p>Lana referenciou o verso livre e a celebração da vida americana de Whitman como influências em suas composições.</p>
+                            <a href="https://www.poetryfoundation.org/poets/walt-whitman" class="influence-link" target="_blank">Ler <i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                     <div class="influence-card">
                         <img src="https://media.newyorker.com/photos/59095f3e8b51cf59fc422abf/master/pass/Allen-Ginsberg-Paterson.jpg" alt="Sylvia Plath" class="influence-image">
                         <div class="influence-info">
                             <h3>Sylvia Plath</h3>
-                            <p>Plath's confessional poetry and themes of femininity and melancholy resonate in Lana's lyrics.</p>
-                            <a href="https://www.poetryfoundation.org/poets/sylvia-plath" class="influence-link" target="_blank">Read <i class="fas fa-external-link-alt"></i></a>
+                            <p>A poesia confessional e temas de feminilidade e melancolia de Plath ressoam nas letras de Lana.</p>
+                            <a href="https://www.poetryfoundation.org/poets/sylvia-plath" class="influence-link" target="_blank">Ler <i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1803,24 +1910,24 @@
                         <img src="https://www.billboard.com/wp-content/uploads/2022/06/the-weeknd-2022-billboard-1548.jpg" alt="The Weeknd" class="influence-image">
                         <div class="influence-info">
                             <h3>The Weeknd</h3>
-                            <p>Collaborated on "Lust for Life" and "Prisoner". Both artists share a dark, cinematic approach to music.</p>
-                            <a href="https://open.spotify.com/track/5rLzRfq8ZQJvPD7uQyZP7b" class="influence-link" target="_blank">Listen <i class="fas fa-external-link-alt"></i></a>
+                            <p>Colaborou em "Lust for Life" e "Prisoner". Ambos os artistas compartilham uma abordagem sombria e cinematográfica à música.</p>
+                            <a href="https://open.spotify.com/track/5rLzRfq8ZQJvPD7uQyZP7b" class="influence-link" target="_blank">Ouvir <i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                     <div class="influence-card">
                         <img src="https://media.npr.org/assets/img/2021/11/12/gettyimages-1235722143-1bc0f8c5c9a7a5a5a5a5a5a5a5a5a5a5a5a5a5a.jpg" alt="Ariana Grande" class="influence-image">
                         <div class="influence-info">
                             <h3>Ariana Grande</h3>
-                            <p>Featured on "Don't Call Me Angel" with Miley Cyrus, blending their distinct vocal styles.</p>
-                            <a href="https://open.spotify.com/track/3Kg9pBKhP4HWNOrE2W3hRD" class="influence-link" target="_blank">Listen <i class="fas fa-external-link-alt"></i></a>
+                            <p>Participou de "Don't Call Me Angel" com Miley Cyrus, misturando seus estilos vocais distintos.</p>
+                            <a href="https://open.spotify.com/track/3Kg9pBKhP4HWNOrE2W3hRD" class="influence-link" target="_blank">Ouvir <i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                     <div class="influence-card">
                         <img src="https://media.npr.org/assets/img/2020/12/09/gettyimages-1229892703-1bc0f8c5c9a7a5a5a5a5a5a5a5a5a5a5a5a5a5a.jpg" alt="Jack Antonoff" class="influence-image">
                         <div class="influence-info">
                             <h3>Jack Antonoff</h3>
-                            <p>Producer and collaborator on Norman Fucking Rockwell! and Chemtrails Over the Country Club.</p>
-                            <a href="https://open.spotify.com/album/5XpEKORZ4y6OrCZSKsi46A" class="influence-link" target="_blank">Listen <i class="fas fa-external-link-alt"></i></a>
+                            <p>Produtor e colaborador em Norman Fucking Rockwell! e Chemtrails Over the Country Club.</p>
+                            <a href="https://open.spotify.com/album/5XpEKORZ4y6OrCZSKsi46A" class="influence-link" target="_blank">Ouvir <i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1828,31 +1935,31 @@
         </div>
     </section>
 
-    <!-- Spotify Stats Section -->
+    <!-- Seção de Estatísticas do Spotify -->
     <section id="spotify-stats" class="section">
         <div class="container">
-            <h2 class="section-title">Spotify Statistics</h2>
+            <h2 class="section-title">Estatísticas do Spotify</h2>
             <div class="stats-container">
                 <div class="stat-card">
                     <div class="stat-icon">
                         <i class="fas fa-headphones"></i>
                     </div>
                     <div class="stat-number" id="monthly-listeners">28.5M</div>
-                    <div class="stat-label">Monthly Listeners</div>
+                    <div class="stat-label">Ouvintes Mensais</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-icon">
                         <i class="fas fa-heart"></i>
                     </div>
                     <div class="stat-number" id="followers">15.2M</div>
-                    <div class="stat-label">Followers</div>
+                    <div class="stat-label">Seguidores</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-icon">
                         <i class="fas fa-music"></i>
                     </div>
                     <div class="stat-number" id="popularity">88</div>
-                    <div class="stat-label">Popularity</div>
+                    <div class="stat-label">Popularidade</div>
                 </div>
             </div>
             
@@ -1862,12 +1969,12 @@
         </div>
     </section>
 
-    <!-- Timeline Section -->
+    <!-- Seção da Linha do Tempo -->
     <section id="timeline" class="section">
         <div class="container">
-            <h2 class="section-title">Career Timeline</h2>
+            <h2 class="section-title">Linha do Tempo da Carreira</h2>
             <div class="timeline-container">
-                <!-- Timeline Item 1 -->
+                <!-- Item 1 -->
                 <div class="timeline-item">
                     <div class="timeline-date">2005</div>
                     <div class="timeline-content">
@@ -1876,7 +1983,7 @@
                     </div>
                 </div>
                 
-                <!-- Timeline Item 2 -->
+                <!-- Item 2 -->
                 <div class="timeline-item">
                     <div class="timeline-date">2010</div>
                     <div class="timeline-content">
@@ -1885,7 +1992,7 @@
                     </div>
                 </div>
                 
-                <!-- Timeline Item 3 -->
+                <!-- Item 3 -->
                 <div class="timeline-item">
                     <div class="timeline-date">2012</div>
                     <div class="timeline-content">
@@ -1894,7 +2001,7 @@
                     </div>
                 </div>
                 
-                <!-- Timeline Item 4 -->
+                <!-- Item 4 -->
                 <div class="timeline-item">
                     <div class="timeline-date">2014</div>
                     <div class="timeline-content">
@@ -1903,7 +2010,7 @@
                     </div>
                 </div>
                 
-                <!-- Timeline Item 5 -->
+                <!-- Item 5 -->
                 <div class="timeline-item">
                     <div class="timeline-date">2017</div>
                     <div class="timeline-content">
@@ -1912,7 +2019,7 @@
                     </div>
                 </div>
                 
-                <!-- Timeline Item 6 -->
+                <!-- Item 6 -->
                 <div class="timeline-item">
                     <div class="timeline-date">2019</div>
                     <div class="timeline-content">
@@ -1921,7 +2028,7 @@
                     </div>
                 </div>
                 
-                <!-- Timeline Item 7 -->
+                <!-- Item 7 -->
                 <div class="timeline-item">
                     <div class="timeline-date">2021</div>
                     <div class="timeline-content">
@@ -1930,7 +2037,7 @@
                     </div>
                 </div>
                 
-                <!-- Timeline Item 8 -->
+                <!-- Item 8 -->
                 <div class="timeline-item">
                     <div class="timeline-date">2023</div>
                     <div class="timeline-content">
@@ -1942,10 +2049,10 @@
         </div>
     </section>
 
-    <!-- Music Section -->
+    <!-- Seção de Música -->
     <section id="music" class="section">
         <div class="container">
-            <h2 class="section-title">Music</h2>
+            <h2 class="section-title">Música</h2>
             <div class="album-grid">
                 <!-- Álbum 1 -->
                 <div class="album-card">
@@ -1953,7 +2060,7 @@
                     <div class="album-overlay">
                         <h3 class="album-name">Ocean Blvd</h3>
                         <p class="album-year">2023</p>
-                        <a href="https://open.spotify.com/album/5HOHne1wzItQlIYmLXLYfZ" class="album-btn" target="_blank">Listen</a>
+                        <a href="https://open.spotify.com/album/5HOHne1wzItQlIYmLXLYfZ" class="album-btn" target="_blank">Ouvir</a>
                     </div>
                 </div>
                 
@@ -1963,7 +2070,7 @@
                     <div class="album-overlay">
                         <h3 class="album-name">Blue Banisters</h3>
                         <p class="album-year">2021</p>
-                        <a href="https://open.spotify.com/album/2wwCc6fcyhp1tfY3J6Javr" class="album-btn" target="_blank">Listen</a>
+                        <a href="https://open.spotify.com/album/2wwCc6fcyhp1tfY3J6Javr" class="album-btn" target="_blank">Ouvir</a>
                     </div>
                 </div>
                 
@@ -1973,7 +2080,7 @@
                     <div class="album-overlay">
                         <h3 class="album-name">NFR!</h3>
                         <p class="album-year">2019</p>
-                        <a href="https://open.spotify.com/album/5XpEKORZ4y6OrCZSKsi46A" class="album-btn" target="_blank">Listen</a>
+                        <a href="https://open.spotify.com/album/5XpEKORZ4y6OrCZSKsi46A" class="album-btn" target="_blank">Ouvir</a>
                     </div>
                 </div>
                 
@@ -1983,7 +2090,7 @@
                     <div class="album-overlay">
                         <h3 class="album-name">Chemtrails</h3>
                         <p class="album-year">2021</p>
-                        <a href="https://open.spotify.com/album/6QeosPQpJckkW0Obir5RT8" class="album-btn" target="_blank">Listen</a>
+                        <a href="https://open.spotify.com/album/6QeosPQpJckkW0Obir5RT8" class="album-btn" target="_blank">Ouvir</a>
                     </div>
                 </div>
                 
@@ -1993,7 +2100,7 @@
                     <div class="album-overlay">
                         <h3 class="album-name">Ultraviolence</h3>
                         <p class="album-year">2014</p>
-                        <a href="https://open.spotify.com/album/1ORxRsK3MrSLvh7VQTF01F" class="album-btn" target="_blank">Listen</a>
+                        <a href="https://open.spotify.com/album/1ORxRsK3MrSLvh7VQTF01F" class="album-btn" target="_blank">Ouvir</a>
                     </div>
                 </div>
 
@@ -2003,17 +2110,17 @@
                     <div class="album-overlay">
                         <h3 class="album-name">Born to Die</h3>
                         <p class="album-year">2012</p>
-                        <a href="https://open.spotify.com/album/1nHMAkfg8sCpyTf98brHzF" class="album-btn" target="_blank">Listen</a>
+                        <a href="https://open.spotify.com/album/1nHMAkfg8sCpyTf98brHzF" class="album-btn" target="_blank">Ouvir</a>
                     </div>
                 </div>
                 
                 <!-- Álbum 7 -->
                 <div class="album-card">
                     <img src="https://i.scdn.co/image/ab67616d0000b273a5e60f6ef11f9fe7f6b6a404" alt="Lust for Life" class="album-image">
-                    <div class="album-overlay">
+                                      <div class="album-overlay">
                         <h3 class="album-name">Lust for Life</h3>
                         <p class="album-year">2017</p>
-                        <a href="https://open.spotify.com/album/5ykFQ0EC8H1uBDl1nF25si" class="album-btn" target="_blank">Listen</a>
+                        <a href="https://open.spotify.com/album/5ykFQ0EC8H1uBDl1nF25si" class="album-btn" target="_blank">Ouvir</a>
                     </div>
                 </div>
                 
@@ -2023,33 +2130,33 @@
                     <div class="album-overlay">
                         <h3 class="album-name">Honeymoon</h3>
                         <p class="album-year">2015</p>
-                        <a href="https://open.spotify.com/album/4VZyLfWVvlgjl3hy7lb9nM" class="album-btn" target="_blank">Listen</a>
+                        <a href="https://open.spotify.com/album/4VZyLfWVvlgjl3hy7lb9nM" class="album-btn" target="_blank">Ouvir</a>
                     </div>
                 </div>
             </div>
             
-            <!-- Spotify Players -->
+            <!-- Players do Spotify -->
             <div class="spotify-players">
                 <div class="spotify-player">
-                    <h3>Ocean Blvd - Top Tracks</h3>
+                    <h3>Ocean Blvd - Músicas mais tocadas</h3>
                     <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5HOHne1wzItQlIYmLXLYfZ?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 </div>
                 <div class="spotify-player">
-                    <h3>Norman Fucking Rockwell! - Top Tracks</h3>
+                    <h3>Norman Fucking Rockwell! - Músicas mais tocadas</h3>
                     <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5XpEKORZ4y6OrCZSKsi46A?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 </div>
                 <div class="spotify-player">
-                    <h3>Born to Die - Top Tracks</h3>
+                    <h3>Born to Die - Músicas mais tocadas</h3>
                     <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5VoeRuTrGhTbKelUfwymwu?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
+    <!-- Seção de Galeria -->
     <section id="gallery" class="section">
         <div class="container">
-            <h2 class="section-title">Gallery</h2>
+            <h2 class="section-title">Galeria</h2>
             <div class="gallery-container">
                 <div class="gallery-item">
                     <img src="https://th.bing.com/th/id/OIP.lLbWZHer8yL0dQT1nK4z1gHaHa?cb=iwp2&rs=1&pid=ImgDetMain" alt="Lana Del Rey">
@@ -2074,7 +2181,7 @@
                 <div class="gallery-item">
                     <img src="https://i.pinimg.com/736x/ce/d4/a6/ced4a67188ac30a883d0b54d774c8495.jpg" alt="Lana Del Rey">
                     <div class="gallery-caption"></div>
-                    </div>
+                </div>
                 <div class="gallery-item">
                     <img src="https://akamai.sscdn.co/uploadfile/letras/fotos/7/7/e/c/77ecce17b9723d48c92284798b121f5c.jpg" alt="Lana Del Rey">
                     <div class="gallery-caption"></div>
@@ -2087,10 +2194,10 @@
         </div>
     </section>
 
-    <!-- Poetry Section -->
+    <!-- Seção de Poesia -->
     <section id="poetry" class="section">
         <div class="container">
-            <h2 class="section-title">Poetry</h2>
+            <h2 class="section-title">Poesia</h2>
             
             <div class="poem-container">
                 <!-- Canto decorativo -->
@@ -2127,74 +2234,74 @@
         </div>
     </section>
 
-    <!-- Tour Section -->
+    <!-- Seção de Turnê -->
     <section id="tour" class="section">
         <div class="container">
-            <h2 class="section-title">Tour</h2>
+            <h2 class="section-title">Turnê</h2>
             <table class="tour-table">
                 <thead>
                     <tr>
-                        <th>Date</th>
-                        <th>Venue</th>
-                        <th>Location</th>
-                        <th>Tickets</th>
+                        <th>Data</th>
+                        <th>Local</th>
+                        <th>Cidade</th>
+                        <th>Ingressos</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Oct 10, 2024</td>
+                        <td>10 Out 2024</td>
                         <td>Hollywood Bowl</td>
                         <td>Los Angeles, CA</td>
-                        <td><a href="https://www.ticketmaster.com/lana-del-rey-tickets/artist/1669346" class="tour-btn" target="_blank">Buy Tickets</a></td>
+                        <td><a href="https://www.ticketmaster.com/lana-del-rey-tickets/artist/1669346" class="tour-btn" target="_blank">Comprar</a></td>
                     </tr>
                     <tr>
-                        <td>Oct 15, 2024</td>
+                        <td>15 Out 2024</td>
                         <td>Madison Square Garden</td>
                         <td>New York, NY</td>
-                        <td><a href="https://www.ticketmaster.com/lana-del-rey-tickets/artist/1669346" class="tour-btn" target="_blank">Buy Tickets</a></td>
+                        <td><a href="https://www.ticketmaster.com/lana-del-rey-tickets/artist/1669346" class="tour-btn" target="_blank">Comprar</a></td>
                     </tr>
                     <tr>
-                        <td>Oct 20, 2024</td>
+                        <td>20 Out 2024</td>
                         <td>United Center</td>
                         <td>Chicago, IL</td>
-                        <td><span class="sold-out">Sold Out</span></td>
+                        <td><span class="sold-out">Esgotado</span></td>
                     </tr>
                     <tr>
-                        <td>Oct 25, 2024</td>
+                        <td>25 Out 2024</td>
                         <td>Scotiabank Arena</td>
                         <td>Toronto, ON</td>
-                        <td><a href="https://www.ticketmaster.com/lana-del-rey-tickets/artist/1669346" class="tour-btn" target="_blank">Buy Tickets</a></td>
+                        <td><a href="https://www.ticketmaster.com/lana-del-rey-tickets/artist/1669346" class="tour-btn" target="_blank">Comprar</a></td>
                     </tr>
                     <tr>
-                        <td>Nov 5, 2024</td>
+                        <td>5 Nov 2024</td>
                         <td>O2 Arena</td>
-                        <td>London, UK</td>
-                        <td><a href="https://www.ticketmaster.com/lana-del-rey-tickets/artist/1669346" class="tour-btn" target="_blank">Buy Tickets</a></td>
+                        <td>Londres, UK</td>
+                        <td><a href="https://www.ticketmaster.com/lana-del-rey-tickets/artist/1669346" class="tour-btn" target="_blank">Comprar</a></td>
                     </tr>
                     <tr>
-                        <td>Nov 12, 2024</td>
+                        <td>12 Nov 2024</td>
                         <td>Accor Arena</td>
-                        <td>Paris, France</td>
-                        <td><a href="https://www.ticketmaster.com/lana-del-rey-tickets/artist/1669346" class="tour-btn" target="_blank">Buy Tickets</a></td>
+                        <td>Paris, França</td>
+                        <td><a href="https://www.ticketmaster.com/lana-del-rey-tickets/artist/1669346" class="tour-btn" target="_blank">Comprar</a></td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </section>
 
-    <!-- Store Section -->
+    <!-- Seção de Loja -->
     <section id="store" class="section">
         <div class="container">
-            <h2 class="section-title">Store</h2>
+            <h2 class="section-title">Loja</h2>
             <div class="store-grid">
                 <!-- Vinil Ocean Blvd -->
                 <div class="store-item">
-                    <span class="store-badge">New</span>
+                    <span class="store-badge">Novo</span>
                     <img src="https://shoplanadelrey.com/cdn/shop/products/LDRBBVinylStandardProductShot.png?v=1631040981&width=300" alt="Ocean Blvd Vinyl" class="album-image">
                     <div class="store-info">
-                        <h4 class="store-name">Ocean Blvd (Vinyl)</h4>
+                        <h4 class="store-name">Ocean Blvd (Vinil)</h4>
                         <p class="store-price">$34.99</p>
-                        <a href="https://shop.lanadelrey.com/products/did-you-know-that-theres-a-tunnel-under-ocean-blvd-lp" class="store-btn" target="_blank">Buy</a>
+                        <a href="https://shop.lanadelrey.com/products/did-you-know-that-theres-a-tunnel-under-ocean-blvd-lp" class="store-btn" target="_blank">Comprar</a>
                     </div>
                 </div>
                 
@@ -2204,18 +2311,18 @@
                     <div class="store-info">
                         <h4 class="store-name">Ocean Blvd (CD)</h4>
                         <p class="store-price">$14.99</p>
-                        <a href="https://shop.lanadelrey.com/products/did-you-know-that-theres-a-tunnel-under-ocean-blvd-cd" class="store-btn" target="_blank">Buy</a>
+                        <a href="https://shop.lanadelrey.com/products/did-you-know-that-theres-a-tunnel-under-ocean-blvd-cd" class="store-btn" target="_blank">Comprar</a>
                     </div>
                 </div>
                 
                 <!-- Box Set -->
                 <div class="store-item">
-                    <span class="store-badge">Collector's</span>
+                    <span class="store-badge">Colecionador</span>
                     <img src="https://shoplanadelrey.com/cdn/shop/products/LDREXCLUWHITELP-UPDATED.png?v=1670361173&width=300" alt="Ocean Blvd Box Set" class="album-image">
                     <div class="store-info">
                         <h4 class="store-name">Ocean Blvd Box Set</h4>
                         <p class="store-price">$79.99</p>
-                        <a href="https://shop.lanadelrey.com/products/did-you-know-that-theres-a-tunnel-under-ocean-blvd-box-set" class="store-btn" target="_blank">Buy</a>
+                        <a href="https://shop.lanadelrey.com/products/did-you-know-that-theres-a-tunnel-under-ocean-blvd-box-set" class="store-btn" target="_blank">Comprar</a>
                     </div>
                 </div>
                 
@@ -2223,9 +2330,9 @@
                 <div class="store-item">
                     <img src="https://shoplanadelrey.com/cdn/shop/products/Merch_1000x1000-01_Vinyl8.png?v=1610372695&width=300" alt="Born to Die Vinyl" class="album-image">
                     <div class="store-info">
-                        <h4 class="store-name">Born to Die (Vinyl)</h4>
+                        <h4 class="store-name">Born to Die (Vinil)</h4>
                         <p class="store-price">$24.99</p>
-                        <a href="https://shop.lanadelrey.com/products/born-to-die-vinyl" class="store-btn" target="_blank">Buy</a>
+                        <a href="https://shop.lanadelrey.com/products/born-to-die-vinyl" class="store-btn" target="_blank">Comprar</a>
                     </div>
                 </div>
                 
@@ -2233,9 +2340,9 @@
                 <div class="store-item">
                     <img src="https://shoplanadelrey.com/cdn/shop/files/STD2LP.png?v=1686337935&width=300" alt="Ultraviolence Vinyl" class="album-image">
                     <div class="store-info">
-                        <h4 class="store-name">Ultraviolence (Vinyl)</h4>
+                        <h4 class="store-name">Ultraviolence (Vinil)</h4>
                         <p class="store-price">$26.99</p>
-                        <a href="https://shop.lanadelrey.com/products/ultraviolence-vinyl" class="store-btn" target="_blank">Buy</a>
+                        <a href="https://shop.lanadelrey.com/products/ultraviolence-vinyl" class="store-btn" target="_blank">Comprar</a>
                     </div>
                 </div>
             </div>
@@ -2245,19 +2352,19 @@
     <!-- Newsletter -->
     <section id="newsletter" class="newsletter">
         <div class="container">
-            <h2 class="newsletter-title">Join the mailing list</h2>
-            <p class="newsletter-subtitle">Sign up for updates on music, tour dates, merch and more</p>
+            <h2 class="newsletter-title">Junte-se à nossa lista</h2>
+            <p class="newsletter-subtitle">Cadastre-se para receber atualizações sobre música, datas de turnê, produtos e mais</p>
             <form class="newsletter-form" id="newsletterForm">
-                <input type="email" placeholder="Email Address" class="newsletter-input" required>
-                <button type="submit" class="newsletter-submit">Subscribe</button>
+                <input type="email" placeholder="Endereço de Email" class="newsletter-input" required>
+                <button type="submit" class="newsletter-submit">Assinar</button>
             </form>
             <div class="newsletter-success" id="newsletterSuccess">
-                <p>Thank you for subscribing! You'll receive updates soon.</p>
+                <p>Obrigado por se inscrever! Você receberá atualizações em breve.</p>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Rodapé -->
     <footer>
         <div class="container">
             <div class="footer-container">
@@ -2273,78 +2380,78 @@
                 </div>
                 <div class="footer-col">
                     <div class="footer-links">
-                        <h4>Music</h4>
+                        <h4>Música</h4>
                         <ul>
-                            <li><a href="https://music.lanadelrey.com/" target="_blank">Latest Album</a></li>
-                            <li><a href="https://open.spotify.com/artist/00FQb4jTyendYWaN8pK0wa" target="_blank">Stream</a></li>
-                            <li><a href="https://www.youtube.com/lanadelrey" target="_blank">Videos</a></li>
-                            <li><a href="https://www.lanadelrey.com/lyrics/" target="_blank">Lyrics</a></li>
+                            <li><a href="https://music.lanadelrey.com/" target="_blank">Último Álbum</a></li>
+                            <li><a href="https://open.spotify.com/artist/00FQb4jTyendYWaN8pK0wa" target="_blank">Streaming</a></li>
+                            <li><a href="https://www.youtube.com/lanadelrey" target="_blank">Vídeos</a></li>
+                            <li><a href="https://www.lanadelrey.com/lyrics/" target="_blank">Letras</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="footer-col">
                     <div class="footer-links">
-                        <h4>Tour</h4>
+                        <h4>Turnê</h4>
                         <ul>
-                            <li><a href="https://www.lanadelrey.com/tour/" target="_blank">Dates</a></li>
-                            <li><a href="https://www.ticketmaster.com/lana-del-rey-tickets/artist/1669346" target="_blank">Tickets</a></li>
-                            <li><a href="https://www.lanadelrey.com/vip/" target="_blank">VIP Packages</a></li>
+                            <li><a href="https://www.lanadelrey.com/tour/" target="_blank">Datas</a></li>
+                            <li><a href="https://www.ticketmaster.com/lana-del-rey-tickets/artist/1669346" target="_blank">Ingressos</a></li>
+                            <li><a href="https://www.lanadelrey.com/vip/" target="_blank">Pacotes VIP</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="footer-col">
                     <div class="footer-links">
-                        <h4>Store</h4>
+                        <h4>Loja</h4>
                         <ul>
-                            <li><a href="https://shop.lanadelrey.com/" target="_blank">Merch</a></li>
-                            <li><a href="https://shop.lanadelrey.com/collections/music" target="_blank">Music</a></li>
-                            <li><a href="https://shop.lanadelrey.com/collections/accessories" target="_blank">Accessories</a></li>
+                            <li><a href="https://shop.lanadelrey.com/" target="_blank">Produtos</a></li>
+                            <li><a href="https://shop.lanadelrey.com/collections/music" target="_blank">Música</a></li>
+                            <li><a href="https://shop.lanadelrey.com/collections/accessories" target="_blank">Acessórios</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="footer-col">
                     <div class="footer-links">
-                        <h4>About</h4>
+                        <h4>Sobre</h4>
                         <ul>
-                            <li><a href="https://www.lanadelrey.com/bio/" target="_blank">Biography</a></li>
-                            <li><a href="https://www.lanadelrey.com/poetry/" target="_blank">Poetry</a></li>
-                            <li><a href="https://www.lanadelrey.com/philanthropy/" target="_blank">Philanthropy</a></li>
+                            <li><a href="https://www.lanadelrey.com/bio/" target="_blank">Biografia</a></li>
+                            <li><a href="https://www.lanadelrey.com/poetry/" target="_blank">Poesia</a></li>
+                            <li><a href="https://www.lanadelrey.com/philanthropy/" target="_blank">Filantropia</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 Lana Del Rey. All Rights Reserved. | <a href="https://www.lanadelrey.com/privacy-policy/" style="color: var(--gold);">Privacy Policy</a> | <a href="https://www.lanadelrey.com/terms-of-use/" style="color: var(--gold);">Terms of Use</a></p>
+                <p>&copy; 2023 Lana Del Rey. Todos os direitos reservados. | <a href="https://www.lanadelrey.com/privacy-policy/" style="color: var(--gold);">Política de Privacidade</a> | <a href="https://www.lanadelrey.com/terms-of-use/" style="color: var(--gold);">Termos de Uso</a></p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Loader
+        // Loader - Esconde quando a página carrega
         window.addEventListener('load', function() {
             const loader = document.querySelector('.loader');
             loader.classList.add('hidden');
             
-            // Simulate Spotify API data fetch
+            // Simula o carregamento dos dados do Spotify
             setTimeout(() => {
                 updateSpotifyStats();
             }, 1000);
         });
 
-        // Dark Mode Toggle
+        // Toggle do Modo Escuro
         const darkModeToggle = document.getElementById('darkModeToggle');
         const extremeDarkToggle = document.getElementById('extremeDarkToggle');
         const body = document.body;
         const darkIcon = darkModeToggle.querySelector('i');
         const extremeIcon = extremeDarkToggle.querySelector('i');
         
-        // Check localStorage for dark mode
+        // Verifica se o modo escuro está ativado no localStorage
         if (localStorage.getItem('darkMode') === 'enabled') {
             body.classList.add('dark-mode');
             darkIcon.classList.replace('fa-moon', 'fa-sun');
         }
         
-        // Check localStorage for extreme dark mode
+        // Verifica se o modo extremo (fã) está ativado no localStorage
         if (localStorage.getItem('extremeDarkMode') === 'enabled') {
             body.classList.add('extreme-dark-mode');
             darkModeToggle.style.display = 'none';
@@ -2353,20 +2460,22 @@
             createRainEffect();
         }
         
+        // Evento para alternar o modo escuro
         darkModeToggle.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
             
             if (body.classList.contains('dark-mode')) {
                 localStorage.setItem('darkMode', 'enabled');
                 darkIcon.classList.replace('fa-moon', 'fa-sun');
-                darkModeToggle.querySelector('.toggle-text').textContent = 'Light Mode';
+                darkModeToggle.querySelector('.toggle-text').textContent = 'Modo Claro';
             } else {
                 localStorage.setItem('darkMode', 'disabled');
                 darkIcon.classList.replace('fa-sun', 'fa-moon');
-                darkModeToggle.querySelector('.toggle-text').textContent = 'Dark Mode';
+                darkModeToggle.querySelector('.toggle-text').textContent = 'Modo Escuro';
             }
         });
         
+        // Evento para alternar o modo extremo (fã)
         extremeDarkToggle.addEventListener('click', () => {
             body.classList.toggle('extreme-dark-mode');
             
@@ -2374,20 +2483,21 @@
                 localStorage.setItem('extremeDarkMode', 'enabled');
                 localStorage.setItem('darkMode', 'disabled');
                 extremeIcon.classList.replace('fa-star', 'fa-sun');
-                extremeDarkToggle.querySelector('.toggle-text').textContent = 'Light Mode';
+                extremeDarkToggle.querySelector('.toggle-text').textContent = 'Modo Claro';
                 darkModeToggle.style.display = 'none';
                 extremeDarkToggle.style.display = 'flex';
                 createRainEffect();
             } else {
                 localStorage.setItem('extremeDarkMode', 'disabled');
                 extremeIcon.classList.replace('fa-sun', 'fa-star');
-                extremeDarkToggle.querySelector('.toggle-text').textContent = 'Fan Mode';
+                extremeDarkToggle.querySelector('.toggle-text').textContent = 'Modo Fã';
                 darkModeToggle.style.display = 'flex';
                 extremeDarkToggle.style.display = 'none';
                 document.querySelector('.rain').innerHTML = '';
             }
         });
         
+        // Cria o efeito de chuva para o modo extremo
         function createRainEffect() {
             const rainContainer = document.getElementById('rainEffect');
             rainContainer.innerHTML = '';
@@ -2403,7 +2513,7 @@
             }
         }
         
-        // Mobile Menu Toggle
+        // Menu Mobile - Toggle
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const nav = document.querySelector('nav');
         
@@ -2411,7 +2521,7 @@
             nav.classList.toggle('active');
         });
         
-        // Close menu when clicking on a link
+        // Fecha o menu quando clica em um link
         const navLinks = document.querySelectorAll('nav ul li a');
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -2419,7 +2529,7 @@
             });
         });
         
-        // Header scroll effect
+        // Efeito de scroll no header
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
                 document.querySelector('header').style.padding = '15px 0';
@@ -2446,7 +2556,7 @@
             }
         });
 
-        // Back to Top Button
+        // Botão de voltar ao topo
         const backToTopBtn = document.querySelector('.back-to-top');
         
         window.addEventListener('scroll', () => {
@@ -2464,7 +2574,7 @@
             });
         });
 
-        // Scroll Animation
+        // Animação de scroll das seções
         const sections = document.querySelectorAll('.section');
         
         const observerOptions = {
@@ -2483,19 +2593,19 @@
             observer.observe(section);
         });
 
-        // Newsletter Form
+        // Formulário da Newsletter
         const newsletterForm = document.getElementById('newsletterForm');
         const newsletterSuccess = document.getElementById('newsletterSuccess');
         
         newsletterForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Simulate form submission
+            // Simula o envio do formulário
             setTimeout(() => {
                 newsletterForm.style.display = 'none';
                 newsletterSuccess.style.display = 'block';
                 
-                // Reset after 5 seconds
+                // Reseta após 5 segundos
                 setTimeout(() => {
                     newsletterForm.style.display = 'flex';
                     newsletterSuccess.style.display = 'none';
@@ -2504,7 +2614,7 @@
             }, 1000);
         });
 
-        // Mobile Hero Image Fallback
+        // Fallback para imagem do hero em mobile
         function isMobile() {
             return window.innerWidth <= 768;
         }
@@ -2524,7 +2634,7 @@
             }
         });
         
-        // Influences Tabs
+        // Tabs de Influências
         const tabBtns = document.querySelectorAll('.tab-btn');
         const tabContents = document.querySelectorAll('.tab-content');
         
@@ -2532,11 +2642,11 @@
             btn.addEventListener('click', () => {
                 const tabId = btn.getAttribute('data-tab');
                 
-                // Remove active class from all buttons and contents
+                // Remove a classe active de todos os botões e conteúdos
                 tabBtns.forEach(btn => btn.classList.remove('active'));
                 tabContents.forEach(content => content.classList.remove('active'));
                 
-                // Add active class to clicked button and corresponding content
+                // Adiciona a classe active ao botão clicado e conteúdo correspondente
                 btn.classList.add('active');
                 document.getElementById(tabId).classList.add('active');
             });
@@ -2549,18 +2659,18 @@
             if (typedString.length > 8) typedString.shift();
             if (typedString.join('').toLowerCase() === 'brooklyn') {
                 document.getElementById('easterEggModal').classList.add('active');
-                typedString = []; // Reset the typed string
+                typedString = []; // Reseta a string digitada
             }
         });
         
-        // Close Easter Egg Modal
+        // Fecha o modal do Easter Egg
         document.getElementById('closeModal').addEventListener('click', () => {
             document.getElementById('easterEggModal').classList.remove('active');
         });
         
-        // Simulate Spotify API data
+        // Simula dados da API do Spotify
         function updateSpotifyStats() {
-            // These would normally come from an API call
+            // Normalmente viria de uma chamada API
             const stats = {
                 monthlyListeners: '28.5M',
                 followers: '15.2M',
@@ -2571,12 +2681,13 @@
             document.getElementById('followers').textContent = stats.followers;
             document.getElementById('popularity').textContent = stats.popularity;
             
-            // Animate the numbers
+            // Anima os números
             animateValue('monthly-listeners', 0, 28.5, 2000, 'M');
             animateValue('followers', 0, 15.2, 2000, 'M');
             animateValue('popularity', 0, 88, 2000, '');
         }
         
+        // Função para animar números
         function animateValue(id, start, end, duration, suffix) {
             const obj = document.getElementById(id);
             let startTimestamp = null;
@@ -2591,6 +2702,117 @@
             };
             window.requestAnimationFrame(step);
         }
+
+        // Seletor de Idioma
+        const languageSelector = document.getElementById('languageSelector');
+        const currentFlag = document.getElementById('currentFlag');
+        const currentLanguage = document.getElementById('currentLanguage');
+        let currentLang = 'pt';
+
+        languageSelector.addEventListener('click', () => {
+            if (currentLang === 'pt') {
+                currentLang = 'en';
+                currentFlag.src = 'https://flagcdn.com/w20/us.png';
+                currentLanguage.textContent = 'EN';
+                translateToEnglish();
+            } else {
+                currentLang = 'pt';
+                currentFlag.src = 'https://flagcdn.com/w20/br.png';
+                currentLanguage.textContent = 'PT';
+                translateToPortuguese();
+            }
+        });
+
+        // Função para traduzir para português
+        function translateToPortuguese() {
+            // Títulos das seções
+            document.querySelector('a[href="#about"]').textContent = 'Sobre';
+            document.querySelector('a[href="#awards"]').textContent = 'Prêmios';
+            document.querySelector('a[href="#influences"]').textContent = 'Influências';
+            document.querySelector('a[href="#music"]').textContent = 'Música';
+            document.querySelector('a[href="#spotify-stats"]').textContent = 'Spotify';
+            document.querySelector('a[href="#gallery"]').textContent = 'Galeria';
+            document.querySelector('a[href="#tour"]').textContent = 'Turnê';
+            document.querySelector('a[href="#store"]').textContent = 'Loja';
+            document.querySelector('a[href="#newsletter"]').textContent = 'Newsletter';
+            
+            // Outros textos
+            document.querySelector('.hero-subtitle').textContent = 'Novo álbum "Did you know that there\'s a tunnel under Ocean Blvd" disponível agora';
+            document.querySelector('.hero-btn').textContent = 'Ouvir Agora';
+            document.querySelector('.section-title').textContent = 'Sobre';
+            document.querySelector('#awards .section-title').textContent = 'Prêmios & Reconhecimento';
+            document.querySelector('#influences .section-title').textContent = 'Influências & Colaborações';
+            document.querySelector('#spotify-stats .section-title').textContent = 'Estatísticas do Spotify';
+            document.querySelector('#timeline .section-title').textContent = 'Linha do Tempo da Carreira';
+            document.querySelector('#music .section-title').textContent = 'Música';
+            document.querySelector('#gallery .section-title').textContent = 'Galeria';
+            document.querySelector('#poetry .section-title').textContent = 'Poesia';
+            document.querySelector('#tour .section-title').textContent = 'Turnê';
+            document.querySelector('#store .section-title').textContent = 'Loja';
+            document.querySelector('.newsletter-title').textContent = 'Junte-se à nossa lista';
+            document.querySelector('.newsletter-subtitle').textContent = 'Cadastre-se para receber atualizações sobre música, datas de turnê, produtos e mais';
+            document.querySelector('.newsletter-input').placeholder = 'Endereço de Email';
+            document.querySelector('.newsletter-submit').textContent = 'Assinar';
+            document.querySelector('#newsletterSuccess p').textContent = 'Obrigado por se inscrever! Você receberá atualizações em breve.';
+            document.querySelector('.footer-links h4').textContent = 'Música';
+            document.querySelectorAll('.footer-links h4')[1].textContent = 'Turnê';
+            document.querySelectorAll('.footer-links h4')[2].textContent = 'Loja';
+            document.querySelectorAll('.footer-links h4')[3].textContent = 'Sobre';
+            document.querySelector('.copyright').innerHTML = '&copy; 2023 Lana Del Rey. Todos os direitos reservados. | <a href="https://www.lanadelrey.com/privacy-policy/" style="color: var(--gold);">Política de Privacidade</a> | <a href="https://www.lanadelrey.com/terms-of-use/" style="color: var(--gold);">Termos de Uso</a>';
+        }
+
+        // Função para traduzir para inglês
+        function translateToEnglish() {
+            // Section titles
+            document.querySelector('a[href="#about"]').textContent = 'About';
+            document.querySelector('a[href="#awards"]').textContent = 'Awards';
+            document.querySelector('a[href="#influences"]').textContent = 'Influences';
+            document.querySelector('a[href="#music"]').textContent = 'Music';
+            document.querySelector('a[href="#spotify-stats"]').textContent = 'Spotify';
+            document.querySelector('a[href="#gallery"]').textContent = 'Gallery';
+            document.querySelector('a[href="#tour"]').textContent = 'Tour';
+            document.querySelector('a[href="#store"]').textContent = 'Store';
+            document.querySelector('a[href="#newsletter"]').textContent = 'Newsletter';
+            
+            // Other texts
+            document.querySelector('.hero-subtitle').textContent = 'New album \'Did you know that there\'s a tunnel under Ocean Blvd\' out now';
+            document.querySelector('.hero-btn').textContent = 'Listen Now';
+            document.querySelector('.section-title').textContent = 'About';
+            document.querySelector('#awards .section-title').textContent = 'Awards & Recognition';
+            document.querySelector('#influences .section-title').textContent = 'Influences & Collaborations';
+            document.querySelector('#spotify-stats .section-title').textContent = 'Spotify Statistics';
+            document.querySelector('#timeline .section-title').textContent = 'Career Timeline';
+            document.querySelector('#music .section-title').textContent = 'Music';
+            document.querySelector('#gallery .section-title').textContent = 'Gallery';
+            document.querySelector('#poetry .section-title').textContent = 'Poetry';
+            document.querySelector('#tour .section-title').textContent = 'Tour';
+            document.querySelector('#store .section-title').textContent = 'Store';
+            document.querySelector('.newsletter-title').textContent = 'Join the mailing list';
+            document.querySelector('.newsletter-subtitle').textContent = 'Sign up for updates on music, tour dates, merch and more';
+            document.querySelector('.newsletter-input').placeholder = 'Email Address';
+            document.querySelector('.newsletter-submit').textContent = 'Subscribe';
+            document.querySelector('#newsletterSuccess p').textContent = 'Thank you for subscribing! You\'ll receive updates soon.';
+            document.querySelector('.footer-links h4').textContent = 'Music';
+            document.querySelectorAll('.footer-links h4')[1].textContent = 'Tour';
+            document.querySelectorAll('.footer-links h4')[2].textContent = 'Store';
+            document.querySelectorAll('.footer-links h4')[3].textContent = 'About';
+            document.querySelector('.copyright').innerHTML = '&copy; 2023 Lana Del Rey. All Rights Reserved. | <a href="https://www.lanadelrey.com/privacy-policy/" style="color: var(--gold);">Privacy Policy</a> | <a href="https://www.lanadelrey.com/terms-of-use/" style="color: var(--gold);">Terms of Use</a>';
+        }// Função para inicializar o Google Tradutor
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'pt',
+        includedLanguages: 'pt,en,es,fr,de,it,ja,ko,ru,zh-CN',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+    }, 'google_translate_element');
+    
+    // Esconde a barra superior do Google Tradutor
+    var a = document.querySelector("#google_translate_element select");
+    a.addEventListener("change", function(){
+        var b = document.querySelector(".goog-te-banner-frame");
+        if(b) b.style.display = "none";
+    });
+}
     </script>
 </body>
 </html>
